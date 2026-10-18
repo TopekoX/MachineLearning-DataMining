@@ -1,0 +1,19 @@
+GaussianNB akurasi CV: 0.936
+prior kelas [ganas, jinak]: [0.374 0.626]
+              precision    recall  f1-score   support
+
+           0      0.927     0.905     0.916        42
+           1      0.945     0.958     0.952        72
+
+    accuracy                          0.939       114
+   macro avg      0.936     0.932     0.934       114
+weighted avg      0.938     0.939     0.938       114
+
+Korelasi antar fitur ukuran tumor:
+                 mean radius  mean perimeter  mean area
+mean radius           1.000           0.998      0.989
+mean perimeter        0.998           1.000      0.988
+mean area             0.989           0.988      1.000
+P(spam | 'hadiah gratis klik') = 0.978
+P(spam | 'laporan rapat proyek') = 0.034
+P(spam | 'diskon laporan') = 0.490

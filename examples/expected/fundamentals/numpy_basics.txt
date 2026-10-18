@@ -1,0 +1,17 @@
+a      : [1 2 3 4 5 6] | shape: (6,) | dtype: int64
+M:
+ [[1 2 3]
+ [4 5 6]] 
+shape: (2, 3)
+M[1, 2]  : 6
+M[:, 1]  : [2 5]
+a[a > 3] : [4 5 6]
+a * 2    : [ 2  4  6  8 10 12]
+a ** 2   : [ 1  4  9 16 25 36]
+sum semua: 21 | sum per kolom (axis=0): [5 7 9] | sum per baris (axis=1): [ 6 15]
+mean: 3.5 | std: 1.708
+M - mean kolom:
+ [[-1.5 -1.5 -1.5]
+ [ 1.5  1.5  1.5]]
+acak: [0 7 6 4 4]
+jarak: 5.0

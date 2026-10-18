@@ -1,0 +1,6 @@
+Python 3.14
+numpy        OK (versi 2.5.4)
+pandas       OK (versi 3.0.6)
+matplotlib   OK (versi 3.11.2)
+seaborn      OK (versi 0.13.2)
+sklearn      OK (versi 1.9.1)

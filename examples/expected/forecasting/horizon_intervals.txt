@@ -1,0 +1,14 @@
+titik asal (data latih s.d.): 1993-12 ... 2000-12 | jumlah: 8
+
+MAE (ppm) menurut horizon, rata-rata 8 titik asal
+                 Seasonal naive  Holt-Winters  SARIMA
+horizon (bulan)                                      
+1                          1.69          0.25    0.25
+3                          1.70          0.36    0.40
+6                          1.70          0.52    0.47
+9                          1.76          0.61    0.58
+12                         1.78          0.68    0.57
+rata-rata semua horizon: {'Seasonal naive': 1.73, 'Holt-Winters': 0.48, 'SARIMA': 0.46}
+
+Interval prediksi 95% SARIMA: lebar rata-rata horizon 1: 1.20 | horizon 12: 2.47 ppm
+cakupan empiris (nominal 95%): horizon 1-4: 1.00 | 5-8: 0.91 | 9-12: 0.88 | keseluruhan: 0.93

@@ -1,0 +1,21 @@
+    inertia  silhouette  davies_bouldin  calinski_harabasz  ARI_vs_kultivar
+k                                                                          
+2  1658.759       0.259           1.526             69.523            0.374
+3  1277.928       0.285           1.389             70.940            0.897
+4  1175.428       0.260           1.797             56.181            0.765
+5  1109.513       0.202           1.808             46.952            0.599
+6  1046.002       0.237           1.554             41.701            0.639
+7   981.595       0.204           1.661             38.686            0.566
+8   935.201       0.157           1.741             35.805            0.415
+
+k terbaik menurut silhouette (maks.): 3 | Davies-Bouldin (min.): 3 | Calinski-Harabasz (maks.): 3
+penurunan inertia (%) dari k-1 ke k: {3: 23.0, 4: 8.0, 5: 5.6, 6: 5.7, 7: 6.2, 8: 4.7}
+
+k   rata-rata ARI kestabilan (30 bootstrap)
+2   0.675
+3   0.961
+4   0.781
+5   0.631
+6   0.661
+
+Gambar tersimpan: docs/assets/img/clustering/choose-k.png

@@ -1,0 +1,23 @@
+jumlah pelanggan: 900 | skewness: {'recency': 1.44, 'frequency': 2.15, 'monetary': 20.33}
+skewness setelah log: {'recency': -0.03, 'frequency': 0.71, 'monetary': 0.98}
+
+k   silhouette  Davies-Bouldin  stabilitas(ARI)
+2   0.391       0.941           0.924
+3   0.446       0.815           0.990
+4   0.356       1.015           0.907
+5   0.315       1.130           0.871
+6   0.324       1.048           0.917
+
+ARI k-Means vs Ward: 0.849 | ARI k-Means vs kelompok sebenarnya: 0.901
+
+Profil (median):
+            n  recency  frequency  monetary          segmen
+cluster                                                   
+0        452     38.0        7.0     502.0         reguler
+1        337    205.0        3.0     279.0  berisiko pergi
+2        111     10.0       32.0    1353.0             VIP
+
+Tindakan yang diusulkan: {'reguler': 'dorong frekuensi dengan promo bundel', 'berisiko pergi': 'kampanye reaktivasi', 'VIP': 'program loyalitas dan akses awal'}
+
+pelanggan baru: ['VIP', 'berisiko pergi']
+hasil identik setelah dimuat: True

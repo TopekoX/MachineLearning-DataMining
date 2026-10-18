@@ -1,0 +1,13 @@
+frekuensi barang: {'roti': 4, 'mentega': 3, 'susu': 2, 'telur': 2}
+urutan header (menurun): ['roti', 'mentega', 'susu', 'telur']
+transaksi diurutkan: ['roti', 'mentega']
+transaksi diurutkan: ['roti', 'susu']
+transaksi diurutkan: ['roti', 'mentega', 'telur']
+transaksi diurutkan: ['susu', 'telur']
+transaksi diurutkan: ['roti', 'mentega']
+
+min_support=0.05: Apriori 54 itemset | FP-Growth 54 itemset | identik: True
+
+min_support=0.01: Apriori 394 itemset | FP-Growth 394 itemset | identik: True
+
+urutan baris sama persis?  False

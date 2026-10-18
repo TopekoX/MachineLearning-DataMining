@@ -1,0 +1,16 @@
+mean   : 7445776
+median : 6050000
+std    : 12793077
+skew   : 13.78
+Q1=4126000  Q3=8075000  IQR=3949000
+batas: [-1797500, 13998500] -> 24 outlier
+korelasi Pearson x vs x^2: 0.10
+bmi    0.59
+s5     0.57
+bp     0.44
+Name: target, dtype: float64
+churn        0      1
+plan                 
+basic    0.609  0.391
+premium  0.781  0.219
+P(churn) keseluruhan: 0.339

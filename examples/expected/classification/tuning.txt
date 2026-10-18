@@ -1,0 +1,16 @@
+Grid Search SVM
+  kombinasi dicoba : 16
+  parameter terbaik: {'svc__C': 10, 'svc__gamma': 0.01}
+  F1 CV terbaik    : 0.981
+ param_svc__C param_svc__gamma  mean_test_score  std_test_score
+         10.0             0.01            0.981           0.012
+         10.0            0.001            0.978           0.015
+          1.0             0.01            0.978           0.012
+  F1 CV SVM default: 0.976
+
+Random Search Random Forest (15 percobaan)
+  parameter terbaik: {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'n_estimators': 121}
+  F1 CV terbaik    : 0.973
+
+Nested CV F1 untuk prosedur 'Grid Search SVM': 0.979 (+/- 0.007)
+Data uji -> accuracy: 0.982 | F1: 0.986

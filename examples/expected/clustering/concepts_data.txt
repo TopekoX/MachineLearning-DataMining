@@ -1,0 +1,13 @@
+Ukuran: (600, 5) | hilang: 0 | duplikat: 0
+                   mean    std   min    max
+annual_spend       13.3   13.3   0.9  101.3
+visits_per_month    4.9    4.5   0.1   18.8
+avg_basket        206.8  156.2  10.0  833.7
+recency_days       78.8   99.3   1.0  430.0
+age                36.7   11.8  18.0   73.6
+skewness annual_spend: 2.08
+
+Ukuran kelompok sebenarnya: {'loyal': 119, 'musiman': 150, 'pemburu_diskon': 181, 'tidak_aktif': 150}
+
+Kestabilan (ARI antara dua cara mengelompokkan data uji): 0.957
+ARI terhadap kelompok sebenarnya (data uji, penempatan dari model latih): 0.849

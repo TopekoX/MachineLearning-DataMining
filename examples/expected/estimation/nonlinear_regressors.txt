@@ -1,0 +1,24 @@
+KNN k   RMSE latih  RMSE CV
+1       0.00        79.47
+5       50.53       62.11
+10      53.83       59.53
+20      55.45       58.71
+40      57.47       59.53
+
+Tree max_depth  RMSE latih  RMSE CV  jumlah daun
+1               65.02       71.31    2
+2               57.95       63.39    4
+3               54.21       65.27    8
+5               45.77       67.14    26
+None            35.31       69.10    58
+
+RF n_estimators  RMSE CV
+1                70.83
+10               59.09
+100              57.88
+300              57.79
+
+model            MAE     RMSE    R2
+KNN (k=20)       45.45   55.21   0.425
+Tree (depth=3)   45.18   55.63   0.416
+Random Forest    43.36   53.52   0.459

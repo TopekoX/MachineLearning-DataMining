@@ -1,0 +1,6 @@
+latih: (455, 30) | uji: (114, 30)
+proporsi kelas 1 -> latih: 0.626 | uji: 0.632
+
+Baseline mayoritas -> accuracy: 0.632 | F1 kelas 1: 0.774
+Logistic Regression (CV 5 lipatan) -> F1: 0.984 (+/- 0.010)
+Tanpa scaling (CV)                 -> F1: 0.962 (+/- 0.009)

@@ -1,0 +1,12 @@
+                           MAE   RMSE    R2  Std RMSE
+Model                                                
+Baseline (rata-rata)     66.84  78.31 -0.04      4.75
+Linear Regression        44.93  55.23  0.47      3.53
+Ridge (alpha=10)         44.97  55.30  0.47      3.38
+Lasso (alpha=0.5)        44.95  55.29  0.47      3.39
+KNN (k=20)               48.61  59.04  0.41      4.08
+Decision Tree (depth=3)  52.81  65.43  0.26      3.80
+Random Forest            47.89  58.48  0.41      3.93
+
+Model terpilih: Linear Regression
+Uji -> MAE 42.79 | RMSE 53.85 | R2 0.453

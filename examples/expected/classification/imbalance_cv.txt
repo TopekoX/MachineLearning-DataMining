@@ -1,0 +1,10 @@
+Jumlah positif: 108 dari 2000 (5.4%)
+KFold            positif per lipatan validasi: [17, 17, 22, 28, 24]
+StratifiedKFold  positif per lipatan validasi: [21, 21, 22, 22, 22]
+
+model                          acc    prec   recall F1     PR-AUC
+Selalu tebak mayoritas         0.946 0.000 0.000 0.000 0.054
+LogReg                         0.946 0.200 0.009 0.017 0.175
+LogReg class_weight=balanced   0.692 0.124 0.768 0.213 0.123
+Random Forest                  0.961 0.949 0.286 0.434 0.610
+Random Forest balanced         0.958 1.000 0.212 0.344 0.641

@@ -1,0 +1,23 @@
+model                      akurasi_CV
+linear + scaling           0.967
+RBF + scaling              0.971
+RBF tanpa scaling          0.910
+
+C      gamma   akurasi_latih  akurasi_CV
+1      0.001   0.952          0.947
+1      scale   0.982          0.971
+1      1.0     1.000          0.631
+100    0.001   0.987          0.978
+100    scale   1.000          0.958
+100    1.0     1.000          0.635
+
+jumlah support vector per kelas: [51, 46] dari 455 data latih
+              precision    recall  f1-score   support
+
+           0      0.976     0.976     0.976        42
+           1      0.986     0.986     0.986        72
+
+    accuracy                          0.982       114
+   macro avg      0.981     0.981     0.981       114
+weighted avg      0.982     0.982     0.982       114
+

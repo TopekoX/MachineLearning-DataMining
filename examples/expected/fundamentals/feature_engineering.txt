@@ -1,0 +1,12 @@
+skew income     : 13.73
+skew log_income : 1.04
+           size   mean
+age_group             
+18-30       152  0.355
+31-45       172  0.314
+46-60       172  0.407
+61+         104  0.231
+fitur asli     : ['tenure_months', 'n_orders']
+fitur polinomial: ['tenure_months', 'n_orders', 'tenure_months^2', 'tenure_months n_orders', 'n_orders^2']
+ROC-AUC fitur asli        : 0.703
+ROC-AUC + fitur turunan   : 0.702

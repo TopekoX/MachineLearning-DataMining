@@ -1,0 +1,16 @@
+titik asal pengembangan: 1993-12 ... 1998-12
+                            MAE  Std MAE  RMSE  MASE
+Metode                                              
+HW musiman multiplikatif   0.49     0.24  0.57  0.39
+SARIMA (1,1,1)(0,1,1,12)   0.51     0.27  0.58  0.41
+Random Forest (selisih)    0.52     0.36  0.59  0.42
+HW aditif                  0.57     0.30  0.64  0.46
+Ridge alpha=10 (selisih)   0.59     0.32  0.67  0.47
+HW aditif, tren teredam    0.59     0.30  0.67  0.48
+Ridge alpha=0.1 (selisih)  0.60     0.33  0.67  0.48
+Seasonal naive             1.87     0.54  1.93  1.51
+Drift                      2.06     0.07  2.39  1.66
+
+Metode terpilih (MAE pengembangan terendah): HW musiman multiplikatif
+Uji 24 bulan  HW musiman multiplikatif   MAE 0.44 | RMSE 0.54 | MASE 0.34
+Uji 24 bulan  Seasonal naive             MAE 1.88 | RMSE 2.07 | MASE 1.45

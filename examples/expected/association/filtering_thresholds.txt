@@ -1,0 +1,12 @@
+min_support  min_confidence=0.3  0.5  0.7
+0.01         568                 319  200
+0.02         182                 98   70
+0.05         45                  22   15
+
+aturan awal: 182 -> lift >= 1.2: 131 -> confidence >= 0.5: 91
+dengan satu barang di tiap sisi: 10
+aturan confidence >= 0.4 tetapi lift < 1.2: 42 (konsekuen terbanyak: {'kantong_plastik': 42})
+
+Aturan dari paruh 1: 98 | masih lift >= 1.2 pada paruh 2: 99%
+selisih lift (paruh 1 - paruh 2): median -0.005 | terkecil -7.96 | terbesar 1.23
+aturan dengan support terkecil: 20 keranjang pada paruh 1

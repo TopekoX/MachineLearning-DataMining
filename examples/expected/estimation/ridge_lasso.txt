@@ -1,0 +1,23 @@
+jumlah fitur setelah polinomial derajat 2: 65
+
+Linear (10 fitur asli)        RMSE CV: 55.39
+Linear (65 fitur polinomial)  RMSE CV: 62.50
+
+Ridge alpha   RMSE CV
+0.1          62.03
+1            60.47
+10           58.60
+100          56.92
+300          58.61
+1000         63.73
+
+Lasso alpha  RMSE CV   koefisien tidak nol (dari 65)
+0.01        62.19      62
+0.1         60.04      54
+0.5         58.06      41
+1           57.13      36
+3           55.99      16
+10          57.75      4
+Linear 65 fitur  RMSE uji: 55.64
+Ridge alpha=100  RMSE uji: 51.57
+Lasso alpha=1    RMSE uji: 50.63

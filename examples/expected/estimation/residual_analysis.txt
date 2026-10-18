@@ -1,0 +1,16 @@
+MAE 42.79 | MSE 2900.2 | RMSE 53.85 | R2 0.453
+
+Residual -> rata-rata 3.91 | std 54.02 | skew -0.18 | min -154.5 | maks 128.3
+Korelasi |residual| dengan nilai prediksi: 0.28
+
+MAE per tertil prediksi:
+ rendah    26.9
+sedang    48.8
+tinggi    52.8
+
+Tiga galat terbesar (aktual, prediksi, residual):
+  idx 56: 52, 206, -154
+  idx 77: 200, 72, +128
+  idx 211: 70, 180, -110
+
+Gambar tersimpan: docs/assets/img/estimation/residuals.png

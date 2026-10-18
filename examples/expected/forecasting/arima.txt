@@ -1,0 +1,14 @@
+    order seasonal_order   AIC
+(1, 1, 1)  (0, 1, 1, 12) 245.0
+(2, 1, 1)  (0, 1, 1, 12) 246.1
+(1, 1, 1)  (1, 1, 1, 12) 246.3
+(0, 1, 1)  (0, 1, 1, 12) 250.1
+(1, 1, 0)  (0, 1, 1, 12) 259.9
+
+Model terpilih: (1, 1, 1) (0, 1, 1, 12)
+Validasi -> MAE 1.11 | RMSE 1.19 | MASE 0.89
+lebar interval 95%: bulan ke-1 1.20 ppm | bulan ke-12 2.41 | bulan ke-24 3.42
+proporsi nilai aktual dalam interval 95%: 0.54 (24 titik)
+
+Ljung-Box p-value lag 12: 0.470 | lag 24: 0.565 (p kecil = masih ada pola)
+rata-rata residual: 0.021 | std residual: 0.317

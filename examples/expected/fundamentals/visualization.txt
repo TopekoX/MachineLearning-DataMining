@@ -1,0 +1,3 @@
+Gambar tersimpan: ['boxplot-alcohol.png', 'heatmap-wine.png', 'histogram-income.png', 'scatter-wine.png']
+Korelasi alcohol-flavanoids: 0.24
+Skewness income: 13.78

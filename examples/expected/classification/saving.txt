@@ -1,0 +1,10 @@
+berkas tersimpan: ['breast_cancer_model.joblib', 'metadata.json']
+prediksi model asli == model termuat: True
+P(ganas, jinak): [1. 0.] | label asli: 0
+
+fitur              p-value KS (data latih vs batch baru)
+mean radius        0.0000 <- bergeser
+mean texture       0.6342 
+mean smoothness    0.6264 
+
+porsi diprediksi ganas -> data uji: 0.368 | batch bergeser: 0.404

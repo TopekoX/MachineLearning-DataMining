@@ -1,0 +1,41 @@
+Ukuran: (605, 8)
+age                int64
+city                 str
+plan                 str
+tenure_months      int64
+income           float64
+n_orders           int64
+avg_spend        float64
+churn              int64
+        n_missing  pct
+city           18  3.0
+income         48  7.9
+Baris duplikat: 5
+               count       mean        50%          max
+age            605.0       43.0       43.0         69.0
+tenure_months  605.0       30.0       29.0         60.0
+income         557.0  7445776.0  6050000.0  229140000.0
+n_orders       605.0        8.0        8.0         23.0
+avg_spend      605.0   200317.0   180300.0     902000.0
+churn
+0    0.661
+1    0.339
+Name: proportion, dtype: float64
+plan
+basic      0.391
+premium    0.219
+Name: churn, dtype: float64
+tenure_months
+0     0.559
+12    0.439
+24    0.319
+36    0.250
+48    0.149
+60    0.214
+Name: churn per 12 bulan, dtype: float64
+tenure_months   -0.30
+n_orders        -0.17
+age             -0.06
+avg_spend       -0.03
+churn            1.00
+Name: churn, dtype: float64

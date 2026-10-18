@@ -1,0 +1,11 @@
+sebelum: 605 | duplikat: 5
+sesudah: 600
+sisa NaN: 0 | median income: 6004000.0
+income > batas atas: 29 baris
+kategori kota: ['Bandung', 'Jakarta', 'Medan', 'Surabaya']
+hasil one-hot (3 baris pertama):
+ [[0. 0. 0. 1.]
+ [0. 1. 0. 0.]
+ [1. 0. 0. 0.]]
+StandardScaler -> mean: [-0.  0.] std: [1. 1.]
+MinMaxScaler   -> min : [0. 0.] max: [1. 1.]

@@ -1,0 +1,23 @@
+Ukuran fitur: (442, 10) | fitur: ['age', 'sex', 'bmi', 'bp', 's1', 's2', 's3', 's4', 's5', 's6']
+Ada data hilang? False | duplikat: 0
+
+Target -> min 25 | median 140 | rata-rata 152.1 | maks 346 | std 77.1 | skew 0.44
+
+Rata-rata fitur (maks. nilai mutlak): 2.3e-16
+Jumlah kuadrat tiap fitur: [1.]
+
+Korelasi dengan target:
+ bmi    0.59
+s5     0.57
+bp     0.44
+s4     0.43
+s6     0.38
+s1     0.21
+age    0.19
+s2     0.17
+sex    0.04
+s3    -0.39
+
+Pasangan fitur paling berkorelasi: ('s2', 's1') | r = 0.90
+
+Gambar tersimpan: docs/assets/img/estimation/diabetes-eda.png

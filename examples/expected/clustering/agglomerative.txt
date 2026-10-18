@@ -1,0 +1,11 @@
+linkage   ARI vs kultivar  silhouette  ukuran klaster
+ward      0.790            0.277       [58, 56, 64]
+complete  0.577            0.204       [69, 58, 51]
+average   -0.005           0.158       [174, 1, 3]
+single    -0.007           0.183       [174, 3, 1]
+
+8 jarak penggabungan terakhir (Ward): [10.2, 10.4, 11.4, 11.7, 12.2, 12.6, 27.7, 35.4]
+selisih antar penggabungan terakhir: [0.2, 1.0, 0.3, 0.5, 0.3, 15.1, 7.7]
+ambang jarak 20 -> 3 klaster
+
+Gambar tersimpan: docs/assets/img/clustering/dendrogram.png

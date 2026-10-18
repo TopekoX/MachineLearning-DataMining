@@ -1,0 +1,19 @@
+jumlah aturan (min_support=0.05, min_confidence=0.3): 45
+
+                            rule  support  confidence  lift  leverage  conviction
+                sampo  ->  sabun    0.072       0.687 4.659     0.057       2.725
+                sabun  ->  sampo    0.072       0.492 4.659     0.057       1.759
+                 susu  ->  popok    0.058       0.338 4.450     0.045       1.396
+                 popok  ->  susu    0.058       0.763 4.450     0.045       3.498
+gula + kantong_plastik  ->  kopi    0.056       0.810 4.368     0.043       4.292
+kantong_plastik + kopi  ->  gula    0.056       0.703 4.133     0.042       2.790
+
+roti -> mentega: n_roti=527, n_mentega=492, n_keduanya=439, N=2000
+support=0.220  confidence=0.833  lift=3.386
+mlxtend  : support=0.220  confidence=0.833  lift=3.386
+
+Aturan dengan konsekuen kantong_plastik (support kantong_plastik = 0.448):
+                                   rule  support  confidence  lift  leverage  conviction
+mie_instan + telur  ->  kantong_plastik    0.053       0.502 1.123     0.006       1.110
+             telur  ->  kantong_plastik    0.101       0.500 1.117     0.011       1.105
+              susu  ->  kantong_plastik    0.079       0.461 1.029     0.002       1.024

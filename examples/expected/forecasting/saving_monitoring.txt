@@ -1,0 +1,7 @@
+prediksi identik setelah dimuat: True
+model dilatih sampai: 1999-12 | prediksi mulai: 2000-01
+
+MAE acuan (rolling origin, horizon 12): 0.51 ppm | ambang peringatan (2x acuan): 1.03 ppm
+data aktual            MAE 6 bulan terakhir: 0.42 | bulan pertama melewati ambang: tidak ada
+aktual + pergeseran 3  MAE 6 bulan terakhir: 2.58 | bulan pertama melewati ambang: 2000-08
+bias rata-rata galat (aktual - prediksi): data aktual -0.35 | simulasi pergeseran 1.90

@@ -1,0 +1,22 @@
+eps   klaster  noise(%)  ARI
+0.05  15       77.5      0.005
+0.1   11       6.2       0.236
+0.2   2        0.2       0.995
+0.3   1        0.0       0.000
+0.5   1        0.0       0.000
+1.0   1        0.0       0.000
+
+jarak ke tetangga ke-5 (persentil 50/90/95/99): [0.078 0.115 0.139 0.2  ]
+
+ARI pada bulan sabit: DBSCAN(eps=0.2) 0.995 | k-Means 0.233
+DBSCAN: klaster 2, titik noise 1
+
+Wine terstandardisasi, min_samples=5
+eps   klaster  noise(%)  ARI
+1.5   0        100.0     0.000
+2.0   5        47.8      0.220
+2.5   1        13.5      0.005
+3.0   1        6.2       -0.006
+3.5   1        3.4       -0.008
+
+Gambar tersimpan: docs/assets/img/clustering/moons.png

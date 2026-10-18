@@ -1,0 +1,17 @@
+rentang: 1958-03-29 - 2001-12-29 | jumlah baris: 2284
+selisih antar-tanggal (hari): [7.0]
+
+nilai hilang mingguan: 59
+per dekade: {1950: 19, 1960: 34, 1970: 1, 1980: 5}
+
+[simulasi] timestamp hilang terdeteksi: ['1960-02-27', '1960-03-05', '1967-10-28']
+setelah asfreq -> baris: 2284 | NaN baru: 3
+
+bulan tanpa data: ['1958-06', '1958-10', '1964-02', '1964-03', '1964-04']
+bulan 1964 terisi -> interpolasi waktu: [320.07, 320.69, 321.36] | ffill: [319.4, 319.4, 319.4]
+
+rata-rata 1960: 316.9 | 1980: 338.6 | 2000: 369.4 ppm
+kenaikan rata-rata per tahun 1960-1980: 1.09 | 1980-2000: 1.54
+bulan puncak: 5 (2.7 ppm) | bulan terendah: 9 (-2.8 ppm)
+
+Gambar tersimpan: docs/assets/img/forecasting/co2-eda.png

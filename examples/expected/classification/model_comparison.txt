@@ -1,0 +1,22 @@
+Distribusi kelas: {0: 212, 1: 357}
+                             Accuracy     F1  ROC-AUC  Std F1
+Model                                                        
+Logistic Regression             0.973  0.979    0.995   0.008
+KNN (k=5)                       0.964  0.972    0.986   0.014
+KNN (k=5, tanpa scaling)        0.940  0.953    0.955   0.018
+Decision Tree                   0.910  0.927    0.907   0.019
+Decision Tree (max_depth=3)     0.921  0.937    0.933   0.018
+Random Forest                   0.963  0.971    0.990   0.014
+SVM (RBF)                       0.971  0.977    0.996   0.008
+Naive Bayes (Gaussian)          0.940  0.953    0.988   0.018
+
+Model terpilih (F1 CV tertinggi): Logistic Regression
+              precision    recall  f1-score   support
+
+           0      0.976     0.976     0.976        42
+           1      0.986     0.986     0.986        72
+
+    accuracy                          0.982       114
+   macro avg      0.981     0.981     0.981       114
+weighted avg      0.982     0.982     0.982       114
+

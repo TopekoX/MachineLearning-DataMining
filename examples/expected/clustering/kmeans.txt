@@ -1,0 +1,20 @@
+ukuran klaster: [65, 51, 62] | inertia: 1277.9
+ARI terhadap kultivar: 0.897
+
+Pusat klaster (satuan asli):
+    alcohol  flavanoids  proline
+0    12.25        2.05   510.17
+1    13.13        0.82   619.06
+2    13.68        3.00  1100.23
+
+selisih maksimum pusat vs rata-rata anggota: 6.7e-16
+
+seed  inertia  ARI   (init acak, n_init=1)
+0     1280.0   0.880
+1     1277.9   0.897
+2     1277.9   0.897
+3     1277.9   0.897
+4     1282.5   0.846
+
+k-Means pada dua bulan sabit: ARI = 0.233
+Gambar tersimpan: docs/assets/img/clustering/kmeans-wine.png

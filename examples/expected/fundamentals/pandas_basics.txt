@@ -1,0 +1,57 @@
+(605, 8)
+   age      city   plan  tenure_months     income  n_orders  avg_spend  churn
+0   22  Surabaya  basic             47        NaN         9   142700.0      0
+1   58   Jakarta  basic             41  3558000.0         6   246400.0      0
+2   52   Bandung  basic             56  6170000.0        14   154600.0      0
+<class 'pandas.DataFrame'>
+RangeIndex: 605 entries, 0 to 604
+Data columns (total 8 columns):
+ #   Column         Non-Null Count  Dtype  
+---  ------         --------------  -----  
+ 0   age            605 non-null    int64  
+ 1   city           587 non-null    str    
+ 2   plan           605 non-null    str    
+ 3   tenure_months  605 non-null    int64  
+ 4   income         557 non-null    float64
+ 5   n_orders       605 non-null    int64  
+ 6   avg_spend      605 non-null    float64
+ 7   churn          605 non-null    int64  
+dtypes: float64(2), int64(4), str(2)
+memory usage: 37.9 KB
+Series (605,) | DataFrame (605, 1)
+plan
+basic      422
+premium    183
+Name: count, dtype: int64
+premium & usia>=50: 70
+   age      city
+0   22  Surabaya
+1   58   Jakarta
+2   52   Bandung
+   age      city
+0   22  Surabaya
+1   58   Jakarta
+plan
+basic      0.391
+premium    0.219
+Name: churn, dtype: float64
+            n  churn_rate
+city                     
+Bandung   114       0.307
+Jakarta   232       0.349
+Medan      92       0.304
+Surabaya  149       0.369
+age               0
+city             18
+plan              0
+tenure_months     0
+income           48
+n_orders          0
+avg_spend         0
+churn             0
+dtype: int64
+duplikat: 5
+     n_orders  avg_spend  spend_total
+284        11   902000.0    9922000.0
+75         12   697400.0    8368800.0
+5          10   672900.0    6729000.0

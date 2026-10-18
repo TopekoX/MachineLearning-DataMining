@@ -1,0 +1,22 @@
+transaksi: 2000 | barang: 20
+
+itemset sering: 54 | menurut ukuran: {1: 20, 2: 29, 3: 5}
+
+                     itemsets  support
+               mentega + roti    0.220
+                  gula + kopi    0.126
+air_mineral + kantong_plastik    0.119
+       kantong_plastik + roti    0.118
+    kantong_plastik + mentega    0.106
+           mie_instan + telur    0.106
+
+support {roti}=0.264, {mentega}=0.246, {roti, mentega}=0.220
+
+min_support  jumlah itemset sering
+0.2          7
+0.1          21
+0.05         54
+0.02         170
+0.01         394
+
+min_support=0.01 dengan max_len=2: 177

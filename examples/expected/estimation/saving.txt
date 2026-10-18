@@ -1,0 +1,7 @@
+prediksi identik setelah dimuat: True
+prediksi: [141.2 334.8] | di luar rentang latih: [False  True]
+
+batch               MAE
+data uji            42.86
+target bergeser +30 51.49
+bias (rata-rata galat) batch bergeser: 33.9

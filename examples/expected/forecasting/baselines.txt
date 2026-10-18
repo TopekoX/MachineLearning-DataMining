@@ -1,0 +1,14 @@
+                               MAE   RMSE   MASE
+Metode                                          
+Holt-Winters (tren+musiman)   1.37   1.44   1.10
+Drift                         2.34   2.79   1.87
+Holt (tren teredam)           3.07   3.85   2.46
+Naive (nilai terakhir)        3.20   3.75   2.56
+Simple Exp. Smoothing         3.20   3.75   2.56
+Rata-rata 12 bulan terakhir   3.72   4.23   2.98
+Seasonal naive                3.72   3.83   2.98
+Holt (tren)                  20.21  23.94  16.18
+
+Metode terpilih (MASE validasi terendah): Holt-Winters (tren+musiman)
+Uji   -> MAE 0.24 | RMSE 0.31 | MASE 0.18
+Uji (pembanding seasonal naive) -> MAE 1.88 | MASE 1.45

@@ -1,0 +1,16 @@
+2015-01-01    100.9
+2015-02-01    104.4
+2015-03-01    115.6
+Freq: MS
+frekuensi indeks: MS | jumlah: 96
+
+kemiringan tren terestimasi: 1.49 (sebenarnya 1.50)
+amplitudo musiman terestimasi: 12.7 (sebenarnya 12.0)
+simpangan baku sisa: 1.96 (derau sebenarnya 3.00)
+
+ACF lag 1: 0.96 | lag 6: 0.77 | lag 12: 0.63
+
+std deret asli: 41.7 | std setelah diff(1): 5.5 | std setelah diff(12): 3.0
+rata-rata diff(12): 17.9 (tren 1,5/bulan x 12 = 18)
+
+Gambar tersimpan: docs/assets/img/forecasting/decomposition.png

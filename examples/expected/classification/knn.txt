@@ -1,0 +1,23 @@
+k    akurasi_latih  akurasi_CV
+1    1.000          0.943
+3    0.978          0.969
+5    0.974          0.967
+11   0.971          0.963
+21   0.965          0.960
+51   0.949          0.945
+101  0.927          0.912
+
+varian (k=11)                 akurasi_CV
+tanpa scaling                 0.934
+scaling, bobot seragam        0.963
+scaling, bobot jarak          0.963
+
+               precision    recall  f1-score   support
+
+           0      1.000     0.929     0.963        42
+           1      0.960     1.000     0.980        72
+
+    accuracy                          0.974       114
+   macro avg      0.980     0.964     0.971       114
+weighted avg      0.975     0.974     0.973       114
+

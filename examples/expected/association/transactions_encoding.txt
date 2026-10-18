@@ -1,0 +1,19 @@
+   mentega  roti  susu  telur
+0        1     1     0      0
+1        0     1     1      0
+2        1     1     0      1
+3        0     0     1      1
+4        1     1     0      0
+
+support {roti}          = 4/5 = 0.80
+support {roti, mentega} = 3/5 = 0.60
+
+sebelum: [['Roti', 'roti ', 'MENTEGA'], ['susu', 'susu', 'telur']] 
+sesudah: [['mentega', 'roti'], ['susu', 'telur']]
+
+jumlah transaksi: 2000 | rata-rata barang per keranjang: 3.31 | ukuran keranjang min/maks: 1/11
+distribusi ukuran keranjang: {1: 377, 2: 395, 3: 395, 4: 332, 5: 242, 6: 145, 7: 62, 8: 40, 9: 10, 10: 1, 11: 1}
+barang terpopuler (jumlah keranjang): {'kantong_plastik': 895, 'air_mineral': 650, 'roti': 527, 'mentega': 492, 'mie_instan': 437}
+barang paling jarang: {'popok': 152, 'deterjen': 140, 'apel': 128}
+
+ukuran matriks: (2000, 20) | proporsi sel bernilai True: 0.166

@@ -1,0 +1,9 @@
+Proporsi positif seluruh data: 0.103
+acak biasa : positif di data uji = 8 dari 60 (0.133)
+stratified : positif di data uji = 6 dari 60 (0.100)
+ukuran latih/validasi/uji: 180 60 60
+lipatan 1: latih=192, validasi=48, positif validasi=5
+lipatan 2: latih=192, validasi=48, positif validasi=5
+lipatan 3: latih=192, validasi=48, positif validasi=5
+lipatan 4: latih=192, validasi=48, positif validasi=5
+lipatan 5: latih=192, validasi=48, positif validasi=5

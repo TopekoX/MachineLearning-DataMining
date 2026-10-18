@@ -1,0 +1,18 @@
+latih: (353, 10) | uji: (89, 10)
+Baseline (rata-rata)   MAE= 64.01  RMSE= 73.22  R2=-0.012
+Linear Regression      MAE= 42.79  RMSE= 53.85  R2= 0.453
+RMSE CV (5 lipatan): 55.97 (+/- 3.18)
+
+intercept: 151.3
+s1    -931.5
+sex   -242.0
+age     37.9
+s6      48.7
+s3     163.4
+s4     275.3
+bp     347.7
+s2     518.1
+bmi    542.4
+s5     736.2
+
+selisih maks. dengan scikit-learn: 1.46e-11

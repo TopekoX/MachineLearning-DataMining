@@ -1,0 +1,29 @@
+silhouette: 0.428 | ARI terhadap kelompok sebenarnya: 0.927
+
+Profil klaster (rata-rata):
+            n    n%  annual_spend  visits_per_month  avg_basket  recency_days   age
+cluster                                                                           
+0        141  24.0          15.4               1.5       428.0          70.5  45.6
+1        123  20.0          33.0               7.6       245.9           9.8  37.7
+2        152  25.0           3.5               0.8       113.9         220.7  41.4
+3        184  31.0           6.6               9.1        87.9          14.0  25.3
+
+Indeks terhadap rata-rata keseluruhan:
+          annual_spend  visits_per_month  avg_basket  recency_days  age
+cluster                                                               
+0                 116                31         207            89  124
+1                 248               155         119            12  103
+2                  26                16          55           280  113
+3                  50               186          43            18   69
+
+Nama segmen: {0: 'musiman', 1: 'loyal', 2: 'tidak aktif', 3: 'pemburu diskon'}
+
+Crosstab klaster vs kelompok sebenarnya:
+segment_true    loyal  musiman  pemburu_diskon  tidak_aktif
+cluster                                                    
+loyal             117        4               2            0
+musiman             1      140               0            0
+pemburu diskon      1        1             179            3
+tidak aktif         0        5               0          147
+
+Gambar tersimpan: docs/assets/img/clustering/segments.png

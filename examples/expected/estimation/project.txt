@@ -1,0 +1,21 @@
+Ukuran: (800, 7) | hilang: {'age_years': 40, 'condition': 32}
+Harga (juta Rp): median 505 | rata-rata 557 | maks 2068 | skew 0.86
+skew log(harga): -0.50
+
+model                       MAE     RMSE    R2
+Baseline (rata-rata)        259.1   324.4   -0.001
+Ridge, target asli          110.9   147.4   0.792
+Ridge, target log           106.6   149.9   0.783
+Random Forest, target asli  107.2   150.6   0.781
+Random Forest, target log   105.7   149.9   0.783
+
+alpha terbaik: 10 | RMSE CV: 147.5
+
+Uji -> MAE 102.8 | RMSE 149.5 | R2 0.788 (satuan: juta Rp)
+            MAE  rel_err_pct
+district                    
+Barat     104.3         20.2
+Pusat     123.7         21.5
+Selatan    84.2         21.0
+Timur      98.5         20.7
+prediksi identik setelah dimuat: True

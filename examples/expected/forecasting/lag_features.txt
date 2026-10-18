@@ -1,0 +1,12 @@
+fitur: ['lag_1', 'lag_2', 'lag_3', 'lag_12', 'roll_mean_3', 'month_sin', 'month_cos']
+baris sebelum/sesudah dropna: 526 / 513 (lag membuat baris awal kosong)
+              dy  lag_1  lag_2  lag_3  lag_12  roll_mean_3  month_sin  month_cos
+1959-04-01  0.94   0.03   1.20    0.8    1.10         0.68       0.87      -0.50
+1959-05-01  0.65   0.94   0.03    1.2    0.23         0.73       0.50      -0.87
+
+RMSE prediksi perubahan bulanan (ppm) pada 24 bulan terakhir
+simpangan baku target uji (acuan)      : 1.213
+fitur jujur (hanya masa lalu)          : 0.352
+ditambah fitur bocor (termasuk saat t) : 0.000
+korelasi fitur bocor dengan target     : 0.78
+korelasi fitur jujur dengan target     : 0.30

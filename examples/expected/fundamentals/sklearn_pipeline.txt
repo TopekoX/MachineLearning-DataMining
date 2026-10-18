@@ -1,0 +1,5 @@
+ROC-AUC CV: 0.709 (+/- 0.040)
+Akurasi uji : 0.742
+jumlah fitur setelah praproses: 11
+['num__age', 'num__tenure_months', 'num__income', 'num__n_orders', 'num__avg_spend', 'cat__city_Bandung', 'cat__city_Jakarta', 'cat__city_Medan', 'cat__city_Surabaya', 'cat__plan_basic', 'cat__plan_premium']
+langkah pipeline: ['preprocess', 'clf']

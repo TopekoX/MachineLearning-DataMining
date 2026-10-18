@@ -1,0 +1,24 @@
+Confusion matrix:
+ [[41  1]
+ [ 1 71]]
+TN=41 FP=1 FN=1 TP=71
+              precision    recall  f1-score   support
+
+   ganas (0)      0.976     0.976     0.976        42
+   jinak (1)      0.986     0.986     0.986        72
+
+    accuracy                          0.982       114
+   macro avg      0.981     0.981     0.981       114
+weighted avg      0.982     0.982     0.982       114
+
+ROC-AUC           : 0.995
+PR-AUC (avg. prec): 0.997
+
+Ambang P(ganas)  precision_ganas  recall_ganas  ganas_terlewat
+0.1              0.788           0.976         1
+0.3              0.891           0.976         1
+0.5              0.976           0.976         1
+0.7              1.000           0.952         2
+0.9              1.000           0.881         5
+
+Gambar tersimpan: docs/assets/img/classification/evaluation.png

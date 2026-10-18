@@ -1,0 +1,46 @@
+max_depth  akurasi_latih  akurasi_CV  jumlah_daun
+1          0.923          0.897       2
+2          0.958          0.919       4
+3          0.976          0.925       7
+4          0.987          0.938       11
+6          0.998          0.919       18
+None       1.000          0.910       19
+
+min_samples_leaf  akurasi_CV
+1                 0.910
+5                 0.934
+10                0.919
+20                0.905
+
+|--- worst radius <= 16.80
+|   |--- worst concave points <= 0.14
+|   |   |--- area error <= 91.56
+|   |   |   |--- class: 1
+|   |   |--- area error >  91.56
+|   |   |   |--- class: 0
+|   |--- worst concave points >  0.14
+|   |   |--- worst texture <= 25.62
+|   |   |   |--- class: 1
+|   |   |--- worst texture >  25.62
+|   |   |   |--- class: 0
+|--- worst radius >  16.80
+|   |--- texture error <= 0.47
+|   |   |--- class: 1
+|   |--- texture error >  0.47
+|   |   |--- worst concavity <= 0.19
+|   |   |   |--- class: 1
+|   |   |--- worst concavity >  0.19
+|   |   |   |--- class: 0
+
+worst radius            0.764
+worst concave points    0.127
+texture error           0.048
+              precision    recall  f1-score   support
+
+           0      0.927     0.905     0.916        42
+           1      0.945     0.958     0.952        72
+
+    accuracy                          0.939       114
+   macro avg      0.936     0.932     0.934       114
+weighted avg      0.938     0.939     0.938       114
+

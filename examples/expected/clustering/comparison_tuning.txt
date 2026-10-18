@@ -1,0 +1,11 @@
+DBSCAN terbaik menurut silhouette: eps=2.5, min_samples=10 (silhouette 0.323, klaster 2, noise 18%)
+
+                            klaster  noise%  silhouette     DB    ARI    NMI
+Metode                                                                      
+k-Means (k=3)                     3   0.000       0.285  1.389  0.897  0.876
+Agglomerative Ward (k=3)          3   0.000       0.277  1.419  0.790  0.786
+Gaussian Mixture (k=3)            3   0.000       0.285  1.389  0.897  0.876
+DBSCAN (parameter di atas)        2  17.978       0.323  1.196  0.424  0.531
+
+ARI antara k-Means dan Ward: 0.853
+ARI antara k-Means dan Gaussian Mixture: 1.000

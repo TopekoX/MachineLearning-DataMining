@@ -1,0 +1,7 @@
+Validasi 24 bulan, metrik dalam ppm
+Ridge, target level                1-langkah MAE  0.50 | 24-langkah rekursif MAE  1.07 | MASE 0.86
+Random Forest, target level        1-langkah MAE  2.17 | 24-langkah rekursif MAE  2.41 | MASE 1.93
+Ridge, target selisih              1-langkah MAE  0.42 | 24-langkah rekursif MAE  0.97 | MASE 0.78
+Random Forest, target selisih      1-langkah MAE  0.22 | 24-langkah rekursif MAE  0.64 | MASE 0.51
+Seasonal naive (pembanding)                                    24-langkah MAE  3.72 | MASE 2.98
+Rentang CO2 data latih: 313.4 - 366.7 | rentang validasi: 363.9 - 371.0

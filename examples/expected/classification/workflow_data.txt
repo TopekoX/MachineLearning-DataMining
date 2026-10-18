@@ -1,0 +1,18 @@
+Ukuran fitur: (569, 30)
+Nama kelas  : {0: 'malignant', 1: 'benign'}
+target
+benign       357
+malignant    212
+Name: count, dtype: int64
+Proporsi kelas: {1: 0.627, 0: 0.373}
+
+Contoh nama fitur: ['mean radius', 'mean texture', 'mean perimeter'] ... ['worst concave points', 'worst symmetry', 'worst fractal dimension']
+Ada data hilang? False | duplikat: 0
+
+      mean radius  mean area  mean smoothness
+min        6.981      143.5            0.053
+max       28.110     2501.0            0.163
+           mean radius  mean concavity
+target                                
+benign          12.147           0.046
+malignant       17.463           0.161

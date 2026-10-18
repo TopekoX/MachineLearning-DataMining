@@ -1,0 +1,22 @@
+jumlah transaksi: 3000 | rata-rata barang per keranjang: 3.27
+itemset sering: 163 | aturan setelah penyaringan (lift >= 1.2, confidence >= 0.5, antecedent <= 2 barang): 71
+itemset gabungan unik: 42
+
+                                  rule  support  confidence   lift
+       gula + mentega  ->  kopi + roti    0.026       0.743 16.508
+mentega + telur  ->  mie_instan + roti    0.022       0.516  8.941
+          air_mineral + gula  ->  kopi    0.030       0.856  4.899
+    kantong_plastik + sabun  ->  sampo    0.033       0.516  4.731
+                      sampo  ->  sabun    0.075       0.685  4.703
+                kopi + telur  ->  gula    0.023       0.716  4.678
+                 kopi + roti  ->  gula    0.031       0.696  4.551
+              gula + mentega  ->  kopi    0.028       0.790  4.526
+
+Stabilitas 5 aturan teratas paruh 1 -> lift pada paruh 2
+gula + mentega         -> kopi + roti paruh1 16.44 | paruh2 16.58
+kopi + roti            -> gula + mentega paruh1 16.44 | paruh2 16.58
+gula + roti            -> kopi + mentega paruh1 15.87 | paruh2 16.13
+kopi + mentega         -> gula + roti paruh1 15.87 | paruh2 16.13
+mentega + telur        -> mie_instan + roti paruh1 9.63 | paruh2 8.24
+
+tabel aturan siap disimpan sebagai CSV: 42 baris, kolom ['rule', 'support', 'confidence', 'lift']

@@ -1,0 +1,19 @@
+latih    : 1958-03 s.d. 1997-12 (478 bulan)
+validasi : 1998-01 s.d. 1999-12 (24 bulan)
+uji      : 2000-01 s.d. 2001-12 (24 bulan)
+
+RMSE Random Forest, KFold acak          : 0.64 ppm
+RMSE Random Forest, kronologis (validasi): 2.56 ppm
+Rentang target latih: 313.4 - 366.7 | rentang target validasi: 363.9 - 371.0
+
+Seasonal naive pada validasi -> MAE 3.72 | RMSE 3.83 | sMAPE 1.017% | MASE 2.98
+
+Rolling origin, seasonal naive, horizon 12 bulan
+asal (data latih s.d.)   MAE
+1995-12                  1.76
+1996-12                  1.11
+1997-12                  2.91
+1998-12                  1.61
+1999-12                  1.14
+2000-12                  1.49
+rata-rata MAE: 1.67 (+/- 0.60)

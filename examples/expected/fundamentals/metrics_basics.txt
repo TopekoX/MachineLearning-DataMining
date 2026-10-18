@@ -1,0 +1,12 @@
+TP=3 FP=1 FN=1 TN=5
+accuracy : 0.800
+precision: 0.750
+recall   : 0.750
+F1       : 0.750
+
+Model yang selalu menebak 0 -> accuracy: 0.95 | recall: 0.00
+
+MAE : 16.0
+MSE : 320.0
+RMSE: 17.89
+R2  : 0.936

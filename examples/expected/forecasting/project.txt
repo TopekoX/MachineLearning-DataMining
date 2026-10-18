@@ -1,0 +1,23 @@
+data: 2017-01 s.d. 2023-12 | 84 bulan
+rata-rata per tahun: {2017: 216, 2018: 238, 2019: 265, 2020: 296, 2021: 324, 2022: 346, 2023: 376}
+bulan dengan rata-rata tertinggi: 12
+
+Pengembangan (4 titik asal, horizon 12 bulan):
+                          MAE rata-rata  Std
+Metode                                      
+Holt-Winters aditif                 6.7  1.5
+SARIMA (1,1,1)(0,1,1,12)            6.8  1.3
+Seasonal naive                     27.7  3.5
+
+Selisih MAE Holt-Winters vs SARIMA: 0.1 (Std antar-asal: 1.3-1.5) -> dianggap setara
+Metode terpilih: SARIMA (1,1,1)(0,1,1,12)
+Uji -> MAE 4.8 | MASE 0.18   (seasonal naive: MAE 29.7 | MASE 1.14)
+
+Prediksi 2024 (SARIMA dilatih pada seluruh data):
+            prediksi  bawah_95  atas_95
+2024-01-01       376       362      391
+2024-06-01       399       384      413
+2024-11-01       435       420      450
+2024-12-01       453       438      468
+
+prediksi identik setelah dimuat: True

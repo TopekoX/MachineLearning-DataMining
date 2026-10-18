@@ -1,0 +1,17 @@
+nama segmen tersimpan: {0: 'musiman', 1: 'loyal', 2: 'tidak aktif', 3: 'pemburu diskon'}
+pelanggan baru -> ['loyal', 'tidak aktif', 'musiman']
+
+batas jarak (persentil 99 data latih): 2.37
+jarak pelanggan baru ke pusat terdekat: [0.27, 0.8, 0.22, 29.99] | melebihi batas: [False, False, False, True]
+
+porsi segmen (%)  latih | batch sama distribusi | batch SINTETIS bergeser
+                latih  batch_sama  batch_bergeser
+loyal            20.0        20.0            21.0
+musiman          24.0        24.0            28.0
+pemburu diskon   31.0        28.0            24.0
+tidak aktif      25.0        28.0            28.0
+selisih porsi terbesar batch_sama     : 3 poin persen
+selisih porsi terbesar batch_bergeser : 7 poin persen
+rata-rata jarak ke pusat terdekat latih          : 1.13
+rata-rata jarak ke pusat terdekat batch_sama     : 1.12
+rata-rata jarak ke pusat terdekat batch_bergeser : 1.48

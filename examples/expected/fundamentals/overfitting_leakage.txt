@@ -1,0 +1,16 @@
+max_depth  akurasi_latih  akurasi_uji
+1          0.927          0.912
+2          0.965          0.918
+3          0.980          0.924
+5          0.995          0.930
+10         1.000          0.918
+None       1.000          0.918
+
+derajat  R2_latih  R2_uji
+1        0.560     0.615
+4        0.862     0.823
+15       0.912     0.750
+
+Akurasi CV pada data acak murni (harapan teoretis: sekitar 0.50)
+seleksi di luar CV (bocor)   : 0.820
+seleksi di dalam Pipeline    : 0.470

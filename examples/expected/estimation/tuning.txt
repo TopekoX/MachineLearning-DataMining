@@ -1,0 +1,18 @@
+Ridge + polinomial, alpha=1 (bawaan): RMSE CV 60.47
+
+Grid Search Ridge (11 nilai alpha)
+  alpha terbaik: 100.0 | RMSE CV: 56.92
+
+Random Search Random Forest (15 percobaan)
+  parameter terbaik: {'max_depth': 8, 'max_features': 0.6, 'min_samples_leaf': 9, 'n_estimators': 101}
+  RMSE CV: 57.36
+
+Nested CV RMSE: 57.20 (+/- 3.30)
+Uji Ridge          MAE 41.57 | RMSE 51.57
+Uji Random Forest  MAE 42.89 | RMSE 52.80
+
+Tiga alpha teratas (RMSE CV):
+ param_ridge__alpha  rmse
+         100.000000 56.92
+          31.622777 57.43
+          10.000000 58.60

@@ -1,0 +1,13 @@
+rentang proline: 278 - 1680 | rentang hue: 0.48 - 1.71
+std per fitur (terbesar/terkecil): proline =314.9 | nonflavanoid_phenols =0.12
+
+jarak mentah sampel 0 dan 100: 356.3 | kontribusi proline terhadap jarak^2: 99.3%
+jarak setelah standardisasi: 5.32 | kontribusi proline: 4.5%
+
+jarak sampel 0-100 (standar): Euclidean 5.32 | Manhattan 16.37 | cosine 1.040
+
+perlakuan         ARI vs kultivar   silhouette
+tanpa scaling     0.371             0.571
+StandardScaler    0.897             0.285
+MinMaxScaler      0.854             0.301
+RobustScaler      0.895             0.265

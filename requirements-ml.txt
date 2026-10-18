@@ -1,0 +1,12 @@
+# Pustaka untuk menjalankan contoh kode materi (bukan untuk membangun situs).
+# Rentang ini diuji dengan Python 3.14: numpy 2.5, pandas 3.0, scikit-learn 1.9,
+# matplotlib 3.11, seaborn 0.13, scipy 1.18, statsmodels 0.15, mlxtend 0.25.
+numpy>=2.0,<3
+pandas>=2.2,<4
+scikit-learn>=1.5,<2
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+scipy>=1.13,<2
+statsmodels>=0.14,<1     # Forecasting
+mlxtend>=0.23,<1         # Aturan Asosiasi
+jupyter>=1.0             # opsional; TIDAK diuji pada materi ini

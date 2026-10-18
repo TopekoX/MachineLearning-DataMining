@@ -1,0 +1,26 @@
+1 pohon           : akurasi CV 0.910 (+/- 0.019)
+
+n_estimators  akurasi_CV
+1             0.908
+5             0.941
+25            0.954
+100           0.954
+300           0.958
+
+max_features  akurasi_CV
+sqrt          0.960
+0.5           0.958
+1.0           0.958
+
+OOB score: 0.956
+              precision    recall  f1-score   support
+
+           0      0.929     0.929     0.929        42
+           1      0.958     0.958     0.958        72
+
+    accuracy                          0.947       114
+   macro avg      0.943     0.943     0.943       114
+weighted avg      0.947     0.947     0.947       114
+
+Top 3 impurity   : ['worst perimeter', 'worst area', 'worst concave points']
+Top 3 permutation: ['mean concave points', 'mean radius', 'mean fractal dimension']
