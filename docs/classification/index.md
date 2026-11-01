@@ -1,4 +1,4 @@
-# Klasifikasi
+# Klasifikasi (Classification)
 
 Klasifikasi memprediksi **kelas (label kategorik)** dari sebuah data, misalnya email *spam* atau bukan, atau tumor ganas atau jinak. Ini adalah *supervised learning*: model belajar dari data yang labelnya sudah diketahui.
 
