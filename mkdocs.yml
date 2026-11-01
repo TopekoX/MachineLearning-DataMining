@@ -15,7 +15,6 @@ theme:
   language: id
   font: false # system fonts; no Google Fonts request
   features:
-    - navigation.sections
     - navigation.indexes
     - navigation.path # breadcrumbs
     - navigation.footer # previous / next links
