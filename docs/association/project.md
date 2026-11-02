@@ -1,5 +1,29 @@
 # Proyek: Analisis Keranjang Belanja Minimarket
 
+## Gambaran singkat
+
+**Apa ini?** Proyek penutup yang merangkai seluruh alur aturan asosiasi pada data minimarket.
+
+!!! tip "Analogi"
+    Seperti ujian praktik setelah belajar teori: semua langkah dijalankan berurutan.
+
+**Mengapa penting?** Di dunia nyata, hasil aturan asosiasi harus diterjemahkan menjadi tindakan, misalnya paket belanja dan penataan rak. Proyek ini menunjukkan jalannya.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Membersihkan transaksi dan mengodekannya.
+2. Menambang itemset sering dengan FP-Growth.
+3. Membentuk dan menyaring aturan, mengurangi redundansi.
+4. Menguji kestabilan dan menafsirkan hasil untuk bisnis.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Bundling* | Menjual beberapa barang sebagai satu paket |
+| *Merchandising* | Pengaturan barang dan rak di toko |
+| `TransactionEncoder` | Alat mlxtend untuk mengubah transaksi menjadi tabel one-hot |
+
 ## Tujuan proyek
 
 Menerapkan alur aturan asosiasi lengkap: membersihkan transaksi, mengodekan, menambang itemset sering dengan FP-Growth, membentuk dan menyaring aturan, mengurangi redundansi, menguji kestabilan, dan menyiapkan tabel aturan untuk keputusan merchandising.

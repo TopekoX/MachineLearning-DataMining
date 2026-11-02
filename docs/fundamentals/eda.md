@@ -1,5 +1,29 @@
 # Exploratory Data Analysis (EDA)
 
+## Gambaran singkat
+
+**Apa ini?** EDA (*Exploratory Data Analysis*) adalah tahap mengenal data sebelum membuat model.
+
+!!! tip "Analogi"
+    Sebelum membeli rumah, Anda mengecek kondisinya, lingkungan, dan masalah tersembunyi. Anda tidak langsung tanda tangan.
+
+**Mengapa penting?** Banyak kegagalan model berasal dari data yang tidak dikenali, misalnya nilai hilang atau skala yang berbeda. EDA mengubah temuan menjadi keputusan praproses.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Daftar periksa EDA yang sistematis.
+2. Mengenali masalah kualitas data.
+3. Memeriksa sebaran target dan hubungan fitur dengan target.
+4. Menerjemahkan temuan menjadi keputusan praproses.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| EDA | Memeriksa dan merangkum data sebelum memodelkan |
+| Distribusi | Pola sebaran nilai |
+| *Outlier* | Nilai yang sangat jauh dari kebanyakan data |
+
 ## Tujuan pembelajaran
 
 - [x] Menjalankan alur EDA sistematis pada dataset baru.

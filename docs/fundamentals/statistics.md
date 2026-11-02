@@ -1,5 +1,30 @@
 # Statistik untuk Data Mining
 
+## Gambaran singkat
+
+**Apa ini?** Statistik dasar yang dipakai terus di data mining: rata-rata, sebaran, outlier, korelasi, dan probabilitas bersyarat.
+
+!!! tip "Analogi"
+    Menilai nilai ujian sebuah kelas: rata-ratanya, seberapa beragam, siapa yang jauh menyimpang, dan apakah nilai tinggi berkaitan dengan jam belajar.
+
+**Mengapa penting?** Angka ringkas membantu memahami data sebelum memodelkan. Salah menafsirkannya (misalnya korelasi dianggap sebab-akibat) membuat kesimpulan keliru.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Ukuran pemusatan dan sebaran.
+2. Mendeteksi *outlier* dengan aturan IQR.
+3. Menafsirkan korelasi dan batasannya.
+4. Probabilitas bersyarat dari data.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Median | Nilai tengah; tahan terhadap nilai ekstrem |
+| Simpangan baku | Seberapa tersebar data dari rata-rata |
+| Korelasi | Seberapa searah dua variabel bergerak |
+| IQR | Selisih kuartil 3 dan kuartil 1 |
+
 ## Tujuan pembelajaran
 
 - [x] Memilih ukuran pemusatan dan sebaran yang tepat.

@@ -1,5 +1,30 @@
 # Data Latih, Validasi, dan Uji
 
+## Gambaran singkat
+
+**Apa ini?** Membagi data menjadi latih, validasi, dan uji, serta memahami validasi silang.
+
+!!! tip "Analogi"
+    Murid berlatih dengan soal latihan, diperiksa dengan kuis, dan dinilai dengan ujian akhir yang soalnya belum pernah dilihat.
+
+**Mengapa penting?** Menilai model pada data yang sama dengan data latihnya hanya mengukur seberapa baik ia menghafal, bukan seberapa baik ia menebak data baru.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Fungsi data latih, validasi, dan uji.
+2. `train_test_split`, `stratify`, `random_state`.
+3. Validasi silang (*cross-validation*).
+4. Memilih strategi sesuai jenis tugas.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Generalisasi | Kemampuan bekerja baik pada data baru |
+| Validasi silang | Menguji berulang pada potongan data berbeda |
+| `stratify` | Menjaga proporsi kelas saat membagi |
+| `random_state` | Angka awal agar pembagian selalu sama |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan fungsi data latih, validasi, dan uji.

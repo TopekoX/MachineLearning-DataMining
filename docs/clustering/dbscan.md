@@ -1,5 +1,30 @@
 # DBSCAN
 
+## Gambaran singkat
+
+**Apa ini?** DBSCAN mengelompokkan data berdasarkan **kepadatan**: daerah yang ramai menjadi satu kelompok, dan titik yang menyendiri dianggap *noise* (pengganggu).
+
+!!! tip "Analogi"
+    Lihat peta kota pada malam hari dari udara. Daerah dengan banyak lampu rapat tampak seperti pulau-pulau terang, sedangkan lampu tunggal di tengah sawah tidak masuk pulau mana pun. DBSCAN menemukan "pulau terang" itu tanpa kita menyebut jumlah pulaunya.
+
+**Mengapa penting?** k-Means memaksa semua titik masuk kelompok dan hanya cocok untuk bentuk bulat. DBSCAN bisa menemukan bentuk bebas (misalnya melengkung) dan menandai data yang aneh.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Dua pengaturan utama: `eps` (radius tetangga) dan `min_samples` (minimal tetangga agar daerah dianggap padat).
+2. Tiga jenis titik: titik inti, titik batas, dan *noise*.
+3. Cara memilih `eps` dengan grafik jarak ke tetangga.
+4. Kapan DBSCAN unggul dan kapan sulit dipakai.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| `eps` | Radius "lingkungan" di sekitar sebuah titik |
+| `min_samples` | Jumlah titik minimal di lingkungan agar dianggap padat |
+| Titik inti | Titik yang lingkungannya cukup ramai |
+| *Noise* | Titik yang tidak masuk kelompok mana pun (label `-1`) |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan klastering berbasis kepadatan: titik inti, titik batas, dan *noise*.
@@ -8,12 +33,19 @@
 
 ## Intuisi
 
-DBSCAN (*Density-Based Spatial Clustering of Applications with Noise*) mendefinisikan klaster sebagai daerah yang **padat**, dipisahkan daerah yang jarang. Dua parameter:
+DBSCAN (*Density-Based Spatial Clustering of Applications with Noise*) menganggap klaster sebagai daerah yang **padat**, dipisahkan oleh daerah yang **jarang**. Ada dua pengaturan:
 
-- `eps` (\(\varepsilon\)): radius lingkungan sebuah titik.
-- `min_samples`: jumlah minimum titik (termasuk dirinya) di dalam radius agar titik menjadi **titik inti** (*core point*).
+- `eps` (\(\varepsilon\)): radius lingkaran di sekitar sebuah titik, yaitu seberapa jauh ia "melihat" tetangga.
+- `min_samples`: jumlah minimum titik (termasuk dirinya) di dalam lingkaran agar titik itu dianggap berada di daerah ramai, disebut **titik inti** (*core point*).
 
-Titik inti yang saling terjangkau membentuk satu klaster; **titik batas** berada di lingkungan titik inti tetapi bukan titik inti; sisanya adalah ***noise*** (label `-1`). Tidak perlu menentukan jumlah klaster, klaster dapat berbentuk bebas, dan *outlier* otomatis ditandai.
+Cara kerjanya:
+
+1. Periksa tiap titik: jika lingkarannya berisi cukup tetangga, ia **titik inti**.
+2. Titik inti yang lingkarannya saling bersinggungan digabung menjadi satu klaster, lalu klaster itu "menjalar" ke titik inti lain.
+3. Titik yang bukan inti tetapi berada di lingkaran titik inti disebut **titik batas** (tepi klaster).
+4. Titik yang tidak memenuhi keduanya adalah ***noise*** (label `-1`).
+
+Keuntungannya: jumlah klaster tidak perlu ditentukan, bentuk klaster bebas, dan *outlier* langsung ditandai.
 
 | Aspek | Keterangan |
 |---|---|
@@ -52,6 +84,8 @@ Bulan sabit **sintetis** (400 titik, derau kecil) untuk memperlihatkan keunggula
 
 **Interpretasi.** `eps=0,05` membuat 15 klaster dengan 77,5% *noise* (terlalu kecil); `eps=0,1` menghasilkan 11 klaster (ARI 0,236); **`eps=0,2`** menemukan 2 klaster dengan hanya 0,2% *noise* (ARI **0,995**); `eps≥0,3` menggabungkan semuanya menjadi 1 klaster (ARI 0).
 
+**Dengan kata sederhana:** `eps` terlalu kecil membuat hampir semua titik jadi *noise* dan kelompok pecah-pecah; terlalu besar membuat semua kelompok menyatu. Nilai di tengah (0,2) paling pas. Mencari `eps` yang tepat adalah inti penggunaan DBSCAN.
+
 ### Langkah 3: memilih `eps` dari jarak ke tetangga
 
 ```python title="dbscan.py" linenums="31"
@@ -69,6 +103,8 @@ Bulan sabit **sintetis** (400 titik, derau kecil) untuk memperlihatkan keunggula
 ```
 
 **Interpretasi.** Jarak ke tetangga ke-5 pada persentil 50/90/95/99 adalah 0,078; 0,115; 0,139; 0,200. Nilai `eps=0,2` (persentil 99) berhasil di sini; aturan ini hanya panduan, bukan rumus pasti.
+
+**Dengan kata sederhana:** Nilai `eps` yang baik biasanya berada di bagian grafik jarak yang mulai melonjak (persentil tinggi). Ini hanya petunjuk awal; tetap perlu dicoba beberapa nilai.
 
 ### Langkah 4: perbandingan dengan k-Means
 
@@ -95,6 +131,8 @@ Wine distandardisasi (13 fitur) lalu DBSCAN dicoba dengan lima nilai `eps`; labe
 ```
 
 **Interpretasi.** `eps=1,5` menandai seluruh data sebagai *noise*; `eps=2,0` menghasilkan 5 klaster dengan 47,8% *noise* (ARI 0,220); `eps≥2,5` menghasilkan 1 klaster (ARI ≈ 0). Pada dimensi tinggi, jarak antar-titik cenderung seragam sehingga kepadatan sulit dibedakan; DBSCAN tidak menemukan tiga kultivar, padahal k-Means menemukannya (ARI 0,897). **Tidak ada algoritma yang unggul di semua data.**
+
+**Dengan kata sederhana:** Pada data berdimensi banyak, semua titik cenderung berjarak mirip, sehingga "daerah padat" sulit dibedakan. Di sini DBSCAN gagal, padahal k-Means berhasil. Pelajarannya: pilih algoritma sesuai data.
 
 ### Langkah 6: gambar
 

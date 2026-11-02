@@ -1,5 +1,29 @@
 # Menyimpan Pipeline Klastering dan Memantau Segmen
 
+## Gambaran singkat
+
+**Apa ini?** Cara menyimpan model klastering supaya dapat dipakai lagi, lalu menempatkan pelanggan baru ke segmen yang sudah ada tanpa melatih ulang.
+
+!!! tip "Analogi"
+    Setelah menyusun rak buku per kategori, Anda mencatat aturan penyusunannya. Saat buku baru datang, Anda cukup melihat catatan itu untuk menaruhnya, tanpa menyusun ulang seluruh rak. Namun jika jenis buku yang datang mulai berbeda, Anda perlu menyadarinya dan memperbarui aturan.
+
+**Mengapa penting?** Model yang hanya berjalan di notebook tidak berguna bagi bisnis. Selain itu, perilaku pelanggan berubah seiring waktu, sehingga segmen perlu dipantau.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Menyimpan pipeline (praproses + k-Means) beserta nama segmen.
+2. Menempatkan pelanggan baru ke segmen.
+3. Mendeteksi pelanggan yang tidak cocok dengan segmen mana pun (jauh dari semua pusat).
+4. Memantau proporsi segmen untuk melihat pergeseran.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Pipeline | Rangkaian langkah (praproses lalu model) yang dijalankan sebagai satu kesatuan |
+| `joblib` | Pustaka untuk menyimpan objek Python ke berkas |
+| Pergeseran (*drift*) | Pola data baru mulai berbeda dari data saat pelatihan |
+
 ## Tujuan pembelajaran
 
 - [x] Menyimpan pipeline klastering (praproses + k-Means) beserta nama segmen.
@@ -84,6 +108,8 @@ Pipeline sama dengan [pelajaran profil](profiling.md): transformasi log pada fit
 ```
 
 **Interpretasi.** Batas jarak 2,37. Pelanggan baru normal berjarak 0,27; 0,80; dan 0,22 dari pusat terdekat, sedangkan pelanggan ekstrem buatan berjarak 29,99 dan ditandai melebihi batas: tetap masuk ke segmen terdekat tetapi perlu ditinjau.
+
+**Dengan kata sederhana:** Pelanggan baru selalu dimasukkan ke segmen terdekat, tetapi yang jaraknya sangat jauh dari semua pusat (di atas batas) ditandai agar diperiksa manusia. Model tidak boleh dipercaya begitu saja untuk data yang tidak mirip data latihnya.
 
 ### Langkah 5: memantau proporsi segmen dan jarak
 

@@ -1,5 +1,30 @@
 # Lingkungan Python untuk Data Mining
 
+## Gambaran singkat
+
+**Apa ini?** Menyiapkan "ruang kerja" Python untuk proyek: lingkungan terisolasi, pustaka, dan kebiasaan agar hasil bisa diulang.
+
+!!! tip "Analogi"
+    Setiap proyek memakai kotak perkakas sendiri. Jika semua perkakas dicampur di satu laci, mengganti satu alat bisa merusak proyek lain.
+
+**Mengapa penting?** Banyak masalah pemula berasal dari versi pustaka yang bentrok atau hasil yang berubah tiap dijalankan. Lingkungan yang rapi mencegah keduanya.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Membuat dan mengaktifkan *virtual environment*.
+2. Memasang pustaka dan memeriksanya.
+3. Skrip Python vs Jupyter Notebook.
+4. Kebiasaan agar hasil dapat diulang (*reproducible*).
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Virtual environment* | Ruang Python terpisah per proyek |
+| Skrip / *notebook* | Berkas program biasa / dokumen interaktif berisi kode dan hasil |
+| *Reproducible* | Hasil sama jika dijalankan ulang |
+| *Seed* | Angka awal agar bilangan acak selalu sama |
+
 ## Tujuan pembelajaran
 
 - [x] Membuat *virtual environment* yang terisolasi untuk proyek.

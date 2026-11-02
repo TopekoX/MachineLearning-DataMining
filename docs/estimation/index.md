@@ -2,6 +2,27 @@
 
 Estimasi atau regresi memprediksi **nilai numerik kontinu**, misalnya harga rumah atau konsumsi listrik. Ini adalah *supervised learning* dengan target berupa angka.
 
+## Mulai dari sini: apa itu estimasi (regresi)?
+
+**Regresi** adalah cara komputer menebak sebuah **angka** (bukan kategori) setelah belajar dari contoh yang jawabannya diketahui.
+
+!!! tip "Analogi"
+    Agen properti menaksir harga rumah dari luas, jumlah kamar, dan lokasi. Jawabannya angka, misalnya 850 juta, dan kita menilai seberapa dekat tebakan dengan harga sebenarnya.
+
+**Mengapa dipelajari?** Banyak keputusan bergantung pada angka: harga, konsumsi listrik, lama pengiriman.
+
+### Peta belajar
+
+1. **Apa masalahnya dan bagaimana data diperiksa?** → alur kerja dan data
+2. **Model paling dasar** → *baseline* dan regresi linear
+3. **Bagaimana mengukur kesalahan?** → metrik dan residual
+4. **Bagaimana mencegah model terlalu rumit?** → Ridge dan Lasso
+5. **Model yang bisa menangkap hubungan melengkung** → KNN, pohon, dan Random Forest
+6. **Bagaimana menguji, menyetel, dan membandingkan?** → validasi, optimasi, perbandingan
+7. **Bagaimana memakainya?** → simpan, deploy, lalu proyek
+
+Setiap pelajaran dibuka dengan **Gambaran singkat** yang menjelaskan topiknya dengan bahasa sehari-hari.
+
 ## Tujuan pembelajaran
 
 - Membedakan regresi dari klasifikasi dan memilih metrik yang sesuai.

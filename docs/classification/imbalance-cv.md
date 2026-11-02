@@ -1,5 +1,30 @@
 # Kelas Tidak Seimbang dan Validasi Silang
 
+## Gambaran singkat
+
+**Apa ini?** Cara menangani data dengan satu kelas yang jauh lebih sedikit, serta validasi silang berstrata untuk menilai model secara adil.
+
+!!! tip "Analogi"
+    Dari 100 pasien hanya 5 yang sakit. Dokter yang selalu bilang "sehat" akurasinya 95%, tetapi tidak pernah menemukan pasien sakit. Itulah jebakan data tidak seimbang.
+
+**Mengapa penting?** Kasus penting seperti penipuan atau penyakit langka biasanya tidak seimbang. Tanpa penanganan yang tepat, model terlihat bagus padahal gagal pada kelas yang justru penting.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Mengapa akurasi menyesatkan pada kelas tidak seimbang.
+2. Validasi silang berstrata dan metrik yang cocok.
+3. `class_weight` dan batas efektivitasnya.
+4. Opsi lain: menggeser ambang dan *resampling*.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Kelas minoritas | Kelas dengan data paling sedikit |
+| Validasi silang | Menguji model berulang pada potongan data berbeda |
+| `class_weight` | Bobot kesalahan lebih besar untuk kelas langka |
+| *Resampling* | Menambah atau mengurangi data agar kelas seimbang |
+
 ## Tujuan pembelajaran
 
 - [x] Mengenali masalah kelas tidak seimbang (*class imbalance*) dan mengapa *accuracy* menyesatkan.

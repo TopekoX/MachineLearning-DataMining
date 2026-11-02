@@ -1,5 +1,29 @@
 # Optimasi Hyperparameter
 
+## Gambaran singkat
+
+**Apa ini?** Cara mencari pengaturan model (*hyperparameter*) terbaik secara sistematis dengan `GridSearchCV` dan `RandomizedSearchCV`.
+
+!!! tip "Analogi"
+    Mengatur resep kue: berapa gula, berapa lama dipanggang. Pengaturan itu tidak dipelajari kuenya, tetapi Anda yang menentukan. Anda mencoba beberapa kombinasi dan memilih yang paling enak.
+
+**Mengapa penting?** Pengaturan yang tepat sering meningkatkan kinerja, tetapi mencoba banyak kombinasi pada data yang sama membuat skor terbaik terlalu optimis. Kita perlu cara menguji yang jujur.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Beda parameter dan *hyperparameter*.
+2. *Grid search* dan *random search* di dalam `Pipeline`.
+3. Mengapa skor terbaik pencarian terlalu optimis, dan *nested cross-validation* sebagai perbaikannya.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Hyperparameter* | Pengaturan yang kita tentukan sebelum pelatihan |
+| *Grid search* | Mencoba semua kombinasi dalam daftar |
+| *Random search* | Mencoba kombinasi acak |
+| `scoring` | Metrik yang dipakai untuk memilih yang terbaik |
+
 ## Tujuan pembelajaran
 
 - [x] Membedakan parameter (dipelajari) dan hyperparameter (ditetapkan sebelum pelatihan).

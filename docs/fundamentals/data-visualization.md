@@ -1,5 +1,29 @@
 # Visualisasi Data dengan Matplotlib dan Seaborn
 
+## Gambaran singkat
+
+**Apa ini?** Membuat grafik dengan Matplotlib dan Seaborn untuk melihat pola yang tidak tampak dari angka.
+
+!!! tip "Analogi"
+    Daftar angka penjualan sulit dibaca, tetapi grafik garis langsung memperlihatkan kapan naik atau turun.
+
+**Mengapa penting?** Grafik yang tepat mengungkap pola, outlier, dan hubungan. Grafik yang salah memilih bisa menyesatkan.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Memilih jenis grafik sesuai pertanyaan.
+2. Histogram, *boxplot*, *scatter plot*, *heatmap* korelasi.
+3. Membaca grafik secara kritis.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Histogram | Menunjukkan sebaran satu variabel |
+| *Boxplot* | Ringkasan median, kuartil, dan outlier |
+| *Scatter plot* | Titik untuk melihat hubungan dua variabel |
+| *Heatmap* | Warna untuk menunjukkan besar nilai tabel |
+
 ## Tujuan pembelajaran
 
 - [x] Memilih jenis grafik sesuai pertanyaan dan jenis data.

@@ -1,5 +1,28 @@
 # Fitur Waktu dan Lag
 
+## Gambaran singkat
+
+**Apa ini?** Cara mengubah deret waktu menjadi tabel fitur (lag, rata-rata bergulir, kalender) agar bisa dipakai model regresi.
+
+!!! tip "Analogi"
+    Untuk menebak penjualan bulan ini, Anda mencatat penjualan 1 bulan lalu, 12 bulan lalu, dan bulan apa sekarang. Catatan itu menjadi kolom tabel.
+
+**Mengapa penting?** Dengan fitur yang tepat, model regresi biasa dapat meramal. Namun fitur yang keliru bisa memuat nilai masa depan, sehingga hasilnya palsu.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Fitur lag, statistik bergulir, dan fitur kalender.
+2. Menggeser fitur agar tidak membocorkan masa depan.
+3. Mengenali kebocoran dari masa depan.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Lag | Nilai pada waktu sebelumnya |
+| Statistik bergulir | Rata-rata atau ukuran lain dari beberapa nilai terakhir |
+| sin/cos bulan | Cara menyandikan bulan agar Desember dekat dengan Januari |
+
 ## Tujuan pembelajaran
 
 - [x] Mengubah deret waktu menjadi tabel fitur–target untuk model regresi.

@@ -1,5 +1,30 @@
 # Itemset Sering dan Apriori
 
+## Gambaran singkat
+
+**Apa ini?** Apriori adalah algoritma untuk menemukan itemset sering, yaitu kombinasi barang yang cukup sering dibeli bersamaan.
+
+!!! tip "Analogi"
+    Mencari pasangan barang yang laris tanpa memeriksa semua kombinasi. Jika roti saja jarang dibeli, tidak perlu mengecek "roti + mentega + selai" karena pasti lebih jarang lagi.
+
+**Mengapa penting?** Jumlah kombinasi barang meledak sangat cepat. Apriori memangkas pencarian dengan satu prinsip sederhana sehingga tetap bisa dihitung.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Itemset sering dan `min_support`.
+2. Prinsip anti-monoton yang memangkas pencarian.
+3. Menjalankan Apriori dengan `mlxtend`.
+4. Memahami ledakan kombinatorial.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Itemset sering | Kombinasi barang dengan *support* di atas ambang |
+| `min_support` | Batas minimal kemunculan agar dianggap sering |
+| Anti-monoton | Jika kombinasi besar sering, bagian-bagiannya pasti sering |
+| Kombinatorial | Jumlah kombinasi yang tumbuh sangat cepat |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan itemset sering (*frequent itemset*) dan `min_support`.

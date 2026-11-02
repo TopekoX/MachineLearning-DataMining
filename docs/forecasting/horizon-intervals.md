@@ -1,5 +1,28 @@
 # Horizon dan Interval Prediksi
 
+## Gambaran singkat
+
+**Apa ini?** Menunjukkan bahwa ramalan makin tidak pasti saat makin jauh ke depan, dan cara menyatakan ketidakpastian itu.
+
+!!! tip "Analogi"
+    Ramalan cuaca besok lebih akurat daripada ramalan bulan depan. Prakiraan yang jujur juga menyebut rentangnya, bukan hanya satu angka.
+
+**Mengapa penting?** Keputusan bisnis bergantung pada seberapa jauh ke depan kita meramal, dan rentang kemungkinan membantu menilai risiko.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Pengaruh horizon pada besar galat.
+2. Evaluasi dari banyak titik asal (*rolling origin*).
+3. Mengukur seberapa sering nilai nyata jatuh di dalam interval.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Horizon | Berapa langkah ke depan yang diramal |
+| Interval prediksi | Rentang kemungkinan nilai masa depan |
+| Cakupan empiris | Persentase nilai nyata yang jatuh di dalam interval |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan bagaimana galat bergantung pada *horizon* prediksi.

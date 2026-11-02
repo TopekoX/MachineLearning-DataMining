@@ -1,5 +1,29 @@
 # Perbandingan dan Optimasi Model Forecasting
 
+## Gambaran singkat
+
+**Apa ini?** Membandingkan beberapa metode peramalan secara adil dan menyetel pengaturannya tanpa memakai data uji.
+
+!!! tip "Analogi"
+    Beberapa pelari dites di lintasan dan waktu yang sama, bukan satu kali lari saja, sebelum memilih yang terbaik.
+
+**Mengapa penting?** Skor dari satu titik asal bisa kebetulan. Perbandingan yang adil memakai banyak titik asal dan memperhatikan sebarannya.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Ringkasan kekuatan dan batas tiap metode.
+2. Perbandingan dengan *rolling origin* yang sama.
+3. Menyetel varian model tanpa menyentuh data uji.
+4. Memutuskan model terpilih.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Rolling origin* | Menguji berulang dengan titik awal yang bergeser |
+| Holt-Winters | Exponential smoothing dengan tren dan musiman |
+| Sebaran antar titik asal | Seberapa bervariasi galat antar-pengujian |
+
 ## Tujuan pembelajaran
 
 - [x] Membandingkan banyak metode forecasting dengan *rolling origin* yang sama.

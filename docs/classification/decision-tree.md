@@ -1,5 +1,29 @@
 # Decision Tree
 
+## Gambaran singkat
+
+**Apa ini?** Pohon keputusan menebak kelas lewat rangkaian pertanyaan ya/tidak, seperti diagram alur.
+
+!!! tip "Analogi"
+    Permainan "20 pertanyaan": Anda menebak benda dengan bertanya "Apakah hidup?", "Apakah bisa terbang?". Setiap jawaban mempersempit kemungkinan sampai jawaban akhir ketemu.
+
+**Mengapa penting?** Hasilnya mudah dibaca manusia dan dijelaskan kepada orang awam. Pohon juga dasar Random Forest. Kelemahannya, pohon yang dibiarkan tumbuh mudah menghafal data.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Cara pohon memilih pertanyaan terbaik (ukuran kemurnian).
+2. Membatasi ukuran pohon dengan `max_depth` dan `min_samples_leaf`.
+3. Membaca aturan pohon dan *feature importance*.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Simpul / daun | Titik pertanyaan / titik jawaban akhir |
+| Kemurnian | Seberapa seragam kelas dalam satu simpul |
+| `max_depth` | Batas kedalaman pohon |
+| *Feature importance* | Seberapa penting fitur untuk memisahkan data |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan bagaimana pohon keputusan membagi data dan memilih pertanyaan.

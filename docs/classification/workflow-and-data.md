@@ -1,5 +1,29 @@
 # Alur Kerja dan Data Klasifikasi
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran pembuka klasifikasi: mengenal apa itu klasifikasi, cara merumuskan masalahnya, dan memeriksa data sebelum membuat model.
+
+!!! tip "Analogi"
+    Seorang petugas pos memilah surat ke kotak "Jakarta", "Bandung", atau "Surabaya". Ia belajar dari ribuan surat yang sudah diketahui tujuannya. Klasifikasi sama: komputer belajar dari contoh berlabel, lalu menebak label data baru.
+
+**Mengapa penting?** Model yang bagus untuk pertanyaan yang salah tidak berguna. Merumuskan masalah dengan jelas (apa yang ditebak, kesalahan mana yang lebih mahal) menentukan data, metrik, dan model yang dipilih.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Arti klasifikasi dan istilahnya (fitur, label, biner, multikelas).
+2. Pertanyaan yang harus dijawab sebelum menulis kode.
+3. Mengenal dataset dan memeriksanya secara awal.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Fitur | Informasi masukan, misalnya ukuran sel |
+| Label | Jawaban yang ingin ditebak, misalnya ganas atau jinak |
+| Biner / multikelas | Dua kelas / lebih dari dua kelas |
+| *Supervised learning* | Belajar dari data yang punya jawaban |
+
 ## Tujuan pembelajaran
 
 - [x] Merumuskan masalah klasifikasi dengan jelas: apa yang diprediksi, untuk siapa, dan apa biaya kesalahannya.

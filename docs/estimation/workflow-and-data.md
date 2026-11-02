@@ -1,5 +1,30 @@
 # Alur Kerja dan Data Regresi
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran pembuka estimasi (regresi): memahami masalah yang targetnya berupa angka, lalu memeriksa data sebelum membuat model.
+
+!!! tip "Analogi"
+    Agen properti menaksir harga rumah dari luas, jumlah kamar, dan lokasinya. Jawabannya bukan "mahal" atau "murah", tetapi angka, misalnya 850 juta. Itulah regresi.
+
+**Mengapa penting?** Karena jawabannya angka, ukuran kesalahannya juga berbeda dari klasifikasi: kita menghitung seberapa jauh tebakan dari nilai sebenarnya, bukan benar atau salah.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Arti regresi dan bedanya dengan klasifikasi.
+2. Tahap alur kerja yang berbeda pada regresi.
+3. Mengenal dataset Diabetes.
+4. Memeriksa sebaran target, korelasi, dan multikolinearitas.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Target | Angka yang ingin diperkirakan |
+| Kontinu | Bisa bernilai apa saja dalam rentang, bukan kategori |
+| Korelasi | Seberapa searah dua variabel bergerak |
+| Multikolinearitas | Beberapa fitur saling sangat berkorelasi |
+
 ## Tujuan pembelajaran
 
 - [x] Merumuskan masalah regresi dan membedakannya dari klasifikasi.

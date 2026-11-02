@@ -1,5 +1,28 @@
 # FP-Growth
 
+## Gambaran singkat
+
+**Apa ini?** FP-Growth adalah cara lain dan lebih cepat untuk menemukan itemset sering, memakai struktur pohon.
+
+!!! tip "Analogi"
+    Daripada mencatat ulang setiap struk, Anda menggabungkan struk yang awalnya sama dalam satu cabang pohon sehingga lebih ringkas.
+
+**Mengapa penting?** Pada data besar, Apriori harus membuat banyak kandidat. FP-Growth menghindarinya dengan memampatkan data lebih dulu, tetapi hasilnya sama.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Ide FP-Growth dan bedanya dari Apriori.
+2. Mengurutkan barang menurut frekuensi pada FP-tree.
+3. Membuktikan hasilnya sama dengan Apriori.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| FP-tree | Pohon yang memampatkan transaksi berawalan sama |
+| *Prefix* | Awalan yang sama pada beberapa transaksi |
+| Kandidat | Kombinasi yang perlu dicek apakah sering |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan ide FP-Growth dan perbedaannya dari Apriori.

@@ -1,5 +1,28 @@
 # Menyimpan Model, Deployment, dan Monitoring Forecasting
 
+## Gambaran singkat
+
+**Apa ini?** Menyimpan model peramalan dan memantaunya, termasuk menentukan kapan harus dilatih ulang.
+
+!!! tip "Analogi"
+    Prakiraan cuaca yang disusun tahun lalu makin tidak akurat jika iklim berubah. Karena itu perlu dicek terus dan diperbarui.
+
+**Mengapa penting?** Model deret waktu "menua" karena pola berubah. Tanpa pemantauan, ramalan buruk bisa dipakai berbulan-bulan tanpa disadari.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Menyimpan dan memuat model deret waktu.
+2. Menentukan ambang peringatan dari galat acuan.
+3. Memantau galat dan memutuskan pelatihan ulang.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Ambang peringatan | Batas galat yang memicu pemeriksaan |
+| Pelatihan ulang | Melatih model lagi dengan data terbaru |
+| Galat acuan | Galat saat model dikembangkan |
+
 ## Tujuan pembelajaran
 
 - [x] Menyimpan dan memuat model deret waktu.

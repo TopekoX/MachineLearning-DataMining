@@ -1,5 +1,28 @@
 # Feature Engineering
 
+## Gambaran singkat
+
+**Apa ini?** Membuat atau mengubah fitur agar pola lebih mudah dipelajari model.
+
+!!! tip "Analogi"
+    Dari tanggal lahir, kita hitung umur; dari harga dan luas, kita hitung harga per meter. Informasi sama, tetapi bentuk baru lebih bermakna.
+
+**Mengapa penting?** Fitur yang baik sering lebih berpengaruh daripada memilih algoritma yang lebih rumit. Namun fitur baru harus diuji secara jujur.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Membuat fitur dari pengetahuan domain.
+2. Transformasi log, *binning*, dan fitur polinomial.
+3. Menguji apakah fitur baru benar-benar membantu.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Fitur turunan | Fitur baru yang dihitung dari fitur lain |
+| Transformasi log | Menekan nilai besar agar sebaran lebih seimbang |
+| *Binning* | Mengelompokkan angka ke dalam rentang |
+
 ## Tujuan pembelajaran
 
 - [x] Membuat fitur baru dari pengetahuan domain.

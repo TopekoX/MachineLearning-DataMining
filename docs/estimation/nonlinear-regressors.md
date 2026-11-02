@@ -1,5 +1,28 @@
 # KNN, Decision Tree, dan Random Forest Regressor
 
+## Gambaran singkat
+
+**Apa ini?** Versi regresi dari KNN, pohon keputusan, dan Random Forest, yaitu model yang bisa menangkap hubungan melengkung.
+
+!!! tip "Analogi"
+    Garis lurus tidak cukup untuk jalan yang berkelok. Model ini menaksir dengan merata-ratakan data di sekitar atau dalam kelompok yang mirip, bukan lewat satu garis.
+
+**Mengapa penting?** Banyak hubungan di dunia nyata tidak lurus. Namun model ini punya batas: taksirannya tidak pernah keluar dari rentang nilai latih, jadi tidak bisa meramal tren yang terus naik.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Perbedaan versi regresi dibanding klasifikasi.
+2. Mengatur kompleksitas lewat hyperparameter kunci.
+3. Batasan: taksiran konstan per daun dan tidak mengekstrapolasi.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Ekstrapolasi | Menaksir di luar rentang data latih |
+| Daun | Kelompok akhir pada pohon yang taksirannya tetap |
+| `min_samples_leaf` | Minimal data per daun agar tidak menghafal |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan versi regresi dari KNN, pohon keputusan, dan Random Forest.

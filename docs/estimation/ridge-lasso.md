@@ -1,5 +1,29 @@
 # Ridge dan Lasso
 
+## Gambaran singkat
+
+**Apa ini?** Ridge dan Lasso adalah regresi linear dengan penalti agar koefisien tidak terlalu besar.
+
+!!! tip "Analogi"
+    Murid yang menghafal semua soal latihan bisa gagal di ujian. Penalti memaksa model mengambil pola umum dan tidak terpaku pada hal kecil di data latih.
+
+**Mengapa penting?** Dengan banyak fitur, regresi linear biasa mudah *overfitting*. Regularisasi menjaga model tetap sederhana dan lebih baik pada data baru.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Penalti L2 (Ridge) dan L1 (Lasso).
+2. Cara `alpha` mengendalikan *overfitting*.
+3. Mengapa Lasso bisa membuat koefisien tepat nol (memilih fitur).
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Regularisasi | Penalti pada besar koefisien |
+| `alpha` | Kekuatan penalti |
+| Ridge | Mengecilkan semua koefisien |
+| Lasso | Bisa menolkan sebagian koefisien |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan regularisasi L2 (Ridge) dan L1 (Lasso).

@@ -1,5 +1,28 @@
 # Scaling dan Ukuran Jarak
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran tentang cara komputer menghitung "seberapa mirip" dua data (jarak), dan cara menyamakan skala fitur agar perhitungan itu adil.
+
+!!! tip "Analogi"
+    Anda membandingkan dua rumah dari harga (miliaran rupiah) dan jumlah kamar (angka satuan). Selisih harga bisa mencapai ratusan juta, sedangkan selisih kamar hanya 1 atau 2. Jika dihitung apa adanya, selisih harga mendominasi dan jumlah kamar nyaris tidak dihitung. *Scaling* menyamakan "satuan ukur" semua fitur supaya semuanya punya pengaruh yang wajar.
+
+**Mengapa penting?** Hampir semua algoritma klastering bekerja dengan jarak. Tanpa *scaling*, fitur berangka besar menentukan hasil sendirian, dan kelompok yang terbentuk menjadi tidak bermakna.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Tiga cara mengukur jarak: Euclidean (garis lurus), Manhattan (jalan kota berbentuk kotak), dan cosine (arah, bukan panjang).
+2. Tiga cara menyamakan skala: `StandardScaler`, `MinMaxScaler`, `RobustScaler`.
+3. Bukti lewat percobaan bahwa tanpa *scaling* hasil dan metrik bisa menyesatkan.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Jarak (*distance*) | Angka yang menyatakan seberapa berbeda dua data; makin kecil makin mirip |
+| *Scaling* | Mengubah fitur ke skala yang sebanding |
+| *Outlier* | Nilai yang sangat jauh dari kebanyakan data |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan mengapa klastering berbasis jarak sangat dipengaruhi skala fitur.
@@ -9,7 +32,11 @@
 
 ## Jarak antar-sampel
 
-Hampir semua algoritma klastering menggunakan jarak. Untuk dua sampel \(\mathbf{a}\) dan \(\mathbf{b}\) dengan \(p\) fitur:
+Klastering menganggap dua data "mirip" jika **jaraknya kecil**. Jarak dihitung dengan menggabungkan selisih setiap fitur.
+
+**Contoh angka.** Dua pelanggan: A (belanja 10 juta, 5 kunjungan) dan B (belanja 40 juta, 8 kunjungan). Selisih belanja 30, selisih kunjungan 3. Jarak garis lurusnya \(\sqrt{30^2 + 3^2} \approx 30{,}15\). Hampir seluruhnya berasal dari belanja; selisih kunjungan nyaris tidak terasa. Inilah alasan *scaling* diperlukan.
+
+Secara umum, untuk dua sampel \(\mathbf{a}\) dan \(\mathbf{b}\) dengan \(p\) fitur:
 
 $$
 d_{\text{Euclid}} = \sqrt{\sum_{j=1}^{p}(a_j - b_j)^2}, \qquad
@@ -17,9 +44,11 @@ d_{\text{Manhattan}} = \sum_{j=1}^{p}|a_j - b_j|, \qquad
 d_{\text{cosine}} = 1 - \frac{\mathbf{a}\cdot\mathbf{b}}{\lVert\mathbf{a}\rVert\,\lVert\mathbf{b}\rVert}
 $$
 
-- **Euclidean**: jarak garis lurus; menghukum selisih besar pada satu fitur (kuadrat).
-- **Manhattan**: jumlah selisih mutlak; lebih tahan terhadap satu fitur yang menyimpang.
-- **Cosine**: hanya sudut, bukan panjang; cocok untuk teks atau data yang besarnya tidak penting.
+dengan \(a_j\) dan \(b_j\) nilai fitur ke-\(j\) pada tiap sampel. Artinya:
+
+- **Euclidean**: jarak garis lurus, seperti burung terbang. Selisih besar pada satu fitur dihitung sangat berat (karena dikuadratkan).
+- **Manhattan**: jumlah semua selisih, seperti berjalan mengikuti blok jalan kota. Lebih tahan jika satu fitur menyimpang jauh.
+- **Cosine**: hanya membandingkan arah, bukan panjang. Cocok untuk teks, ketika yang penting proporsi dan bukan jumlah.
 
 Karena fitur dijumlahkan, **fitur berskala besar menenggelamkan fitur berskala kecil** pada jarak. Karena itu *scaling* wajib sebelum klastering berbasis jarak.
 
@@ -49,6 +78,8 @@ Dataset **Wine** bawaan scikit-learn (178 sampel, 13 fitur kimia; tiga kultivar)
 
 **Interpretasi.** `proline` berkisar 278–1680, sedangkan `hue` 0,48–1,71. Simpangan baku `proline` 314,9 vs `nonflavanoid_phenols` 0,12: perbedaan ribuan kali lipat.
 
+**Dengan kata sederhana:** Satu fitur (`proline`) bernilai ratusan sampai ribuan, sedangkan lainnya hanya di sekitar satu. Tanpa *scaling*, `proline` akan menentukan hampir seluruh jarak.
+
 ### Langkah 2: jarak sebelum dan sesudah *scaling*
 
 **Tujuan.** Melihat bagaimana satu fitur berskala besar menenggelamkan fitur lain dalam jarak Euclidean.
@@ -71,6 +102,8 @@ Dataset **Wine** bawaan scikit-learn (178 sampel, 13 fitur kimia; tiga kultivar)
 
 **Interpretasi.** Jarak mentah sampel 0 dan 100 adalah 356,3, dan **99,3%** dari kuadrat jarak itu berasal dari `proline` saja: dua belas fitur lain nyaris diabaikan. Setelah standardisasi jarak menjadi 5,32 dan kontribusi `proline` hanya 4,5%, jadi ketiga belas fitur ikut berperan.
 
+**Dengan kata sederhana:** Sebelum *scaling*, hampir seluruh jarak berasal dari satu fitur; dua belas fitur lain nyaris diabaikan. Setelah *scaling*, semua fitur ikut menentukan.
+
 ### Langkah 3: ukuran jarak lain
 
 ```python title="scaling_distance.py" linenums="28"
@@ -84,6 +117,8 @@ Dataset **Wine** bawaan scikit-learn (178 sampel, 13 fitur kimia; tiga kultivar)
 ```
 
 **Interpretasi.** Euclidean 5,32; Manhattan 16,37; cosine 1,040. Angkanya berbeda skala dan tidak dapat dibandingkan langsung; yang penting konsisten dipakai.
+
+**Dengan kata sederhana:** Angka tiap jenis jarak tidak bisa dibandingkan satu sama lain. Pilih satu ukuran dan pakai secara konsisten.
 
 ### Langkah 4: dampak *scaling* pada k-Means
 

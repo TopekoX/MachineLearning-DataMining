@@ -1,5 +1,28 @@
 # Menyimpan Model, Deployment, dan Monitoring Regresi
 
+## Gambaran singkat
+
+**Apa ini?** Menyimpan model regresi, memakainya pada data baru, dan memantaunya, termasuk hal khas regresi seperti ekstrapolasi.
+
+!!! tip "Analogi"
+    Pedagang menaksir harga memakai tabel yang disusun bulan lalu. Jika barang yang datang jauh berbeda dari semua yang pernah ia lihat, taksirannya tidak bisa dipercaya.
+
+**Mengapa penting?** Regresi bisa mengeluarkan angka untuk masukan apa pun, bahkan yang tidak masuk akal. Karena itu rentang masukan dan galat perlu dipantau.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Menyimpan pipeline dan rentang fitur.
+2. Mendeteksi masukan di luar rentang latih.
+3. Memantau galat dan bias setelah dipakai.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Bias | Rata-rata galat; menjauhi nol berarti taksiran selalu terlalu tinggi atau rendah |
+| Pelatihan ulang | Melatih model lagi dengan data baru |
+| Pergeseran | Data baru mulai berbeda dari data latih |
+
 ## Tujuan pembelajaran
 
 - [x] Menyimpan pipeline regresi beserta metadata rentang fitur.

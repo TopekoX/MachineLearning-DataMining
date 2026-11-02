@@ -1,5 +1,30 @@
 # Dasar Deret Waktu: Tren, Musiman, dan Derau
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran dasar: apa itu deret waktu dan apa saja pola penyusunnya (tren, musiman, derau).
+
+!!! tip "Analogi"
+    Grafik penjualan es krim tiap bulan: ada kecenderungan naik dari tahun ke tahun (tren), ada puncak tiap musim panas (musiman), dan ada naik-turun acak yang tidak bisa dijelaskan (derau).
+
+**Mengapa penting?** Memahami komponen ini menentukan metode yang dipilih. Selain itu, pada data berurutan waktu, urutan adalah informasi: mengacak data akan merusaknya.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Mengapa deret waktu berbeda dari data tabel biasa.
+2. Tiga komponen: tren, musiman, derau.
+3. Model aditif vs multiplikatif dan dekomposisi.
+4. Autokorelasi dan diferensiasi.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Deret waktu | Pengamatan berurutan menurut waktu pada selang teratur |
+| Tren | Arah naik atau turun jangka panjang |
+| Musiman | Pola yang berulang pada selang tetap |
+| Autokorelasi | Nilai sekarang berkaitan dengan nilai sebelumnya |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan apa yang membuat data deret waktu berbeda dari data tabular biasa.

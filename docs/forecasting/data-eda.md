@@ -1,5 +1,29 @@
 # Data Deret Waktu dan EDA
 
+## Gambaran singkat
+
+**Apa ini?** Cara memeriksa data deret waktu: indeks waktu, tanggal yang hilang, mengubah frekuensi, dan melihat pola awal.
+
+!!! tip "Analogi"
+    Sebelum membaca catatan harian suhu, Anda cek dulu apakah ada hari yang terlewat dan apakah tanggalnya urut.
+
+**Mengapa penting?** Tanggal yang hilang atau berantakan merusak lag dan validasi. EDA yang tepat menjaga semua langkah berikutnya benar.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Memeriksa frekuensi dan rentang indeks waktu.
+2. Membedakan tanggal hilang dari nilai hilang (`NaN`).
+3. Mengubah frekuensi dengan *resample*.
+4. EDA khas deret waktu: tren, musiman, laju pertumbuhan.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Resample* | Mengubah frekuensi, misalnya mingguan menjadi bulanan |
+| Indeks waktu | Kolom tanggal yang menjadi penanda baris |
+| `NaN` | Nilai kosong |
+
 ## Tujuan pembelajaran
 
 - [x] Memeriksa indeks waktu: frekuensi, rentang, dan timestamp yang hilang.

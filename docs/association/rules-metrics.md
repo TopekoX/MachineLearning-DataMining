@@ -1,5 +1,30 @@
 # Aturan Asosiasi: Support, Confidence, dan Lift
 
+## Gambaran singkat
+
+**Apa ini?** Cara membentuk aturan "jika beli A maka beli B" dan mengukur kekuatannya dengan *support*, *confidence*, dan *lift*.
+
+!!! tip "Analogi"
+    Banyak orang membeli kantong plastik. Maka "orang yang beli roti juga beli kantong plastik" tampak kuat, padahal semua orang membelinya. Lift memeriksa apakah hubungan itu lebih kuat daripada kebetulan.
+
+**Mengapa penting?** Confidence saja bisa menipu pada barang populer. Memahami tiga ukuran ini bersama mencegah kita mengambil kesimpulan yang salah.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Bentuk aturan A ⇒ B.
+2. *Support*, *confidence*, dan *lift*.
+3. Ukuran tambahan: *leverage* dan *conviction*.
+4. Bahaya membaca confidence tanpa lift.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Antecedent | Bagian "jika" pada aturan |
+| Consequent | Bagian "maka" pada aturan |
+| *Confidence* | Dari yang membeli A, berapa persen juga membeli B |
+| *Lift* | Seberapa kuat hubungan dibanding kebetulan; di atas 1 berarti ada kaitan |
+
 ## Tujuan pembelajaran
 
 - [x] Membentuk aturan \(A \Rightarrow B\) dari itemset sering.

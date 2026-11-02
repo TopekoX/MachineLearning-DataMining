@@ -1,5 +1,29 @@
 # Profil dan Interpretasi Klaster
 
+## Gambaran singkat
+
+**Apa ini?** Setelah data dikelompokkan, kelompok hanya punya nomor (0, 1, 2). Pelajaran ini mengajarkan cara "mengenali" tiap kelompok dan memberinya nama yang bermakna.
+
+!!! tip "Analogi"
+    Seorang pengelola toko diberi tiga keranjang bernomor berisi data pelanggan. Ia menghitung rata-rata belanja dan kunjungan tiap keranjang, lalu menamai: "Pelanggan setia", "Pemburu diskon", "Hampir pergi". Nama inilah yang bisa dipakai tim pemasaran.
+
+**Mengapa penting?** Klastering baru berguna jika hasilnya dapat dijelaskan ke orang yang mengambil keputusan, dengan satuan yang mereka pahami (rupiah, hari, kali kunjungan), bukan angka hasil *scaling*.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Membangun pipeline: transformasi log, *scaling*, lalu k-Means.
+2. Membuat profil tiap kelompok dalam satuan asli.
+3. Menghitung indeks terhadap rata-rata keseluruhan agar perbedaan mudah dibaca.
+4. Menamai segmen dan memeriksa apakah nama itu cocok.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Profil klaster | Ringkasan ciri rata-rata tiap kelompok |
+| Indeks | Perbandingan nilai kelompok dengan rata-rata semua data (100 = sama dengan rata-rata) |
+| Segmen | Nama bermakna untuk sebuah kelompok |
+
 ## Tujuan pembelajaran
 
 - [x] Membangun pipeline klastering (transformasi log, *scaling*, k-Means).

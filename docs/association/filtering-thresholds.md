@@ -1,5 +1,29 @@
 # Penyaringan Aturan, Ambang Batas, dan Keterbatasan
 
+## Gambaran singkat
+
+**Apa ini?** Cara memilih ambang, menyaring aturan agar yang tersisa berguna, dan mengenali keterbatasan aturan asosiasi.
+
+!!! tip "Analogi"
+    Dari 10.000 aturan, tim pemasaran hanya sanggup membaca 20. Kita perlu penyaring agar yang sampai ke mereka adalah yang paling berguna.
+
+**Mengapa penting?** Ambang terlalu longgar menghasilkan ribuan aturan tidak berguna; terlalu ketat menghilangkan pola penting. Selain itu, aturan asosiasi menunjukkan keterkaitan, bukan sebab-akibat.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Memilih `min_support` dan `min_confidence`.
+2. Menyaring dengan lift dan ukuran antecedent.
+3. Menilai kestabilan aturan tanpa pembagian latih/uji klasik.
+4. Mengenali keterbatasan aturan asosiasi.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Ambang | Batas minimal untuk menyimpan sebuah aturan |
+| Redundan | Aturan berlebihan yang artinya hampir sama |
+| Kestabilan | Aturan tetap muncul di sampel data berbeda |
+
 ## Tujuan pembelajaran
 
 - [x] Memilih `min_support` dan `min_confidence` serta memahami dampaknya pada jumlah aturan.

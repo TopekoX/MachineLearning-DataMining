@@ -1,5 +1,30 @@
 # NumPy
 
+## Gambaran singkat
+
+**Apa ini?** NumPy adalah pustaka dasar untuk menghitung dengan array (kumpulan angka) secara cepat.
+
+!!! tip "Analogi"
+    Daripada menghitung 1.000 angka satu per satu dengan kalkulator, Anda memakai lembar hitung yang mengubah seluruh kolom sekaligus.
+
+**Mengapa penting?** Hampir semua pustaka ML dibangun di atas NumPy. Memahaminya membuat kode lain jauh lebih mudah dibaca.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Membuat array dan memahami `shape` serta `dtype`.
+2. Memilih elemen (*indexing*, *slicing*, *mask*).
+3. Operasi vektor, `axis`, dan *broadcasting*.
+4. Menghitung jarak Euclidean.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Array | Kumpulan angka berbentuk baris dan kolom |
+| `shape` | Ukuran array, misalnya (100, 5) |
+| `axis` | Arah operasi: per baris atau per kolom |
+| *Broadcasting* | Aturan otomatis menyamakan ukuran array saat dihitung bersama |
+
 ## Tujuan pembelajaran
 
 - [x] Membuat array dan memahami `shape` serta `dtype`.

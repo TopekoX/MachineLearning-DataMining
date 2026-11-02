@@ -2,6 +2,21 @@
 
 Topik fondasi yang dipakai di semua bab. Setiap topik diajarkan sekali di sini, lalu bab-bab merujuknya.
 
+## Mulai dari sini: mengapa ada bab dasar?
+
+Semua bab (klasifikasi, regresi, forecasting, klaster, asosiasi) memakai alat dan konsep yang sama. Bab ini mengajarkannya sekali saja agar bab lain bisa fokus pada metodenya.
+
+!!! tip "Analogi"
+    Sebelum memasak berbagai hidangan, Anda belajar memegang pisau, mengatur api, dan mengenali bahan. Bab ini adalah latihan dasarnya.
+
+### Tiga kelompok isi
+
+1. **Alat**: lingkungan Python, NumPy, pandas, visualisasi.
+2. **Memahami dan menyiapkan data**: statistik, EDA, praproses, *feature engineering*.
+3. **Menilai model dengan jujur**: pembagian data, *overfitting* dan kebocoran, metrik, *pipeline* scikit-learn.
+
+Setiap pelajaran dibuka dengan **Gambaran singkat** yang menjelaskan topiknya dengan bahasa sehari-hari.
+
 ## Prasyarat
 
 Pemahaman dasar pemrograman dan matematika tingkat SMA. Python dijelaskan dari awal.

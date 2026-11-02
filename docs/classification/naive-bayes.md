@@ -1,5 +1,29 @@
 # Naive Bayes
 
+## Gambaran singkat
+
+**Apa ini?** Naive Bayes menghitung peluang tiap kelas dari fitur-fiturnya dengan teorema Bayes, dengan anggapan "naif" bahwa fitur saling bebas.
+
+!!! tip "Analogi"
+    Menebak email spam dari kata di dalamnya. Kata "gratis" dan "hadiah" lebih sering muncul di spam. Anda mengalikan peluang tiap kata seolah kata-kata itu tidak saling memengaruhi. Anggapan itu kasar, tetapi sering cukup berhasil.
+
+**Mengapa penting?** Model ini sangat cepat, bekerja baik pada data kecil, dan populer untuk klasifikasi teks. Ia juga *baseline* yang bagus.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Teorema Bayes dan asumsi independensi fitur.
+2. `GaussianNB` untuk angka dan `MultinomialNB` untuk cacah kata.
+3. Mengapa model tetap berguna walau asumsinya tidak sepenuhnya benar.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Prior* | Peluang awal suatu kelas sebelum melihat fitur |
+| Independen | Tidak saling memengaruhi |
+| *Laplace smoothing* | Cara mencegah peluang nol untuk kata yang belum pernah muncul |
+| Probabilitas | Angka 0 sampai 1 yang menyatakan kemungkinan |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan teorema Bayes dan asumsi "naif" independensi fitur.

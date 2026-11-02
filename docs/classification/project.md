@@ -1,5 +1,30 @@
 # Proyek: Prediksi Churn Pelanggan End-to-End
 
+## Gambaran singkat
+
+**Apa ini?** Proyek penutup yang merangkai seluruh alur klasifikasi, dari data mentah sampai model siap dipakai.
+
+!!! tip "Analogi"
+    Seperti ujian praktik mengemudi setelah belajar teori: semua bagian dijalankan berurutan.
+
+**Mengapa penting?** Di dunia nyata langkah-langkah itu saling memengaruhi. Proyek ini memperlihatkan keputusan di satu langkah berdampak pada langkah berikutnya.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Pembersihan data dan pembagian data uji.
+2. Praproses di dalam `ColumnTransformer`.
+3. Membandingkan *baseline* dan beberapa model.
+4. Menyetel model, memilih ambang, dan evaluasi akhir sekali pada data uji.
+5. Menyimpan model.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Churn | Pelanggan yang berhenti berlangganan |
+| `ColumnTransformer` | Alat menerapkan praproses berbeda pada kolom berbeda |
+| Evaluasi akhir | Pengujian sekali pada data uji yang tidak pernah disentuh |
+
 ## Tujuan proyek
 
 Menerapkan seluruh alur klasifikasi pada data tabular bertipe campuran: pembagian data, *pipeline*, *baseline*, perbandingan model, optimasi ringan, pemilihan ambang, evaluasi akhir, dan penyimpanan model.

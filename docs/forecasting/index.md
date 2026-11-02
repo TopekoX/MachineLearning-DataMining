@@ -2,6 +2,26 @@
 
 Forecasting memprediksi **nilai di masa depan** dari data berurutan waktu, misalnya penjualan bulanan atau konsentrasi CO2. Urutan waktu adalah informasi penting, sehingga cara membagi, memvalidasi, dan mengevaluasi data berbeda dari bab lain.
 
+## Mulai dari sini: apa itu forecasting?
+
+**Forecasting** adalah meramal nilai **di masa depan** dari data yang berurutan menurut waktu.
+
+!!! tip "Analogi"
+    Penjual es krim melihat catatan penjualan beberapa tahun: ada tren naik, ada puncak tiap musim panas. Dari pola itu ia memperkirakan stok bulan depan.
+
+**Mengapa berbeda dari bab lain?** Urutan waktu adalah informasi. Data tidak boleh diacak, dan model tidak boleh "mengintip" masa depan saat belajar.
+
+### Peta belajar
+
+1. **Apa yang membentuk deret waktu?** → tren, musiman, derau
+2. **Bagaimana data diperiksa?** → data dan EDA
+3. **Bagaimana menguji dengan benar?** → validasi kronologis dan metrik
+4. **Metode peramalan** → *baseline*, ARIMA/SARIMA, regresi dengan fitur lag
+5. **Seberapa pasti ramalannya?** → horizon dan interval
+6. **Mana yang terbaik, dan bagaimana memakainya?** → perbandingan, simpan, pantau, lalu proyek
+
+Setiap pelajaran dibuka dengan **Gambaran singkat** yang menjelaskan topiknya dengan bahasa sehari-hari.
+
 ## Tujuan pembelajaran
 
 - Mengenali tren, musiman (*seasonality*), dan derau pada deret waktu.

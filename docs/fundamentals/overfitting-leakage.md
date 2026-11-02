@@ -1,5 +1,29 @@
 # Overfitting, Underfitting, dan Kebocoran Data
 
+## Gambaran singkat
+
+**Apa ini?** Memahami dua kegagalan utama model (*underfitting* dan *overfitting*) dan kebocoran data yang membuat skor tampak palsu.
+
+!!! tip "Analogi"
+    Murid yang menghafal kunci jawaban (overfitting) dapat nilai sempurna di latihan tetapi gagal di soal baru. Murid yang belajar sekadarnya (underfitting) gagal di keduanya. Kebocoran adalah murid yang melihat soal ujian sebelumnya.
+
+**Mengapa penting?** Ini sumber kesalahan paling umum di machine learning. Mengenalinya dari selisih skor latih dan uji menyelamatkan dari model yang gagal di dunia nyata.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Underfitting, overfitting, dan generalisasi.
+2. Mendiagnosis dari selisih skor latih dan uji.
+3. Mendemonstrasikan kebocoran data dan mencegahnya.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Underfitting* | Model terlalu sederhana |
+| *Overfitting* | Model menghafal derau data latih |
+| *Data leakage* | Informasi di luar data latih ikut memengaruhi pelatihan |
+| Derau (*noise*) | Variasi acak yang tidak berpola |
+
 ## Tujuan pembelajaran
 
 - [x] Membedakan *underfitting*, *overfitting*, dan model yang menggeneralisasi dengan baik.

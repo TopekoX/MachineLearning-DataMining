@@ -1,5 +1,29 @@
 # Metrik Regresi dan Analisis Residual
 
+## Gambaran singkat
+
+**Apa ini?** Cara mengukur kesalahan model regresi (MAE, MSE, RMSE, R²) dan membaca pola kesalahannya lewat plot residual.
+
+!!! tip "Analogi"
+    Dua pemanah sama-sama rata-rata mengenai pusat, tetapi anak panah satu tersebar luas dan yang lain rapat. Satu angka tidak cukup; pola tembakan juga perlu dilihat.
+
+**Mengapa penting?** Angka metrik bisa tampak bagus sementara model sistematis salah pada rentang tertentu. Plot residual membuka masalah yang tersembunyi di balik rata-rata.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Empat metrik dan kapan memakai masing-masing.
+2. Membuat dan membaca plot residual.
+3. Mengenali galat yang membesar pada rentang tertentu (heteroskedastisitas).
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| MAE | Rata-rata besar selisih, satuan sama dengan target |
+| RMSE | Seperti MAE, tetapi lebih menghukum kesalahan besar |
+| R² | Seberapa banyak variasi target yang dijelaskan model |
+| Residual | Nilai sebenarnya dikurangi taksiran |
+
 ## Tujuan pembelajaran
 
 - [x] Menghitung dan menafsirkan MAE, MSE, RMSE, dan R².

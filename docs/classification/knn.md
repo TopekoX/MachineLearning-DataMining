@@ -1,5 +1,29 @@
 # K-Nearest Neighbors (KNN)
 
+## Gambaran singkat
+
+**Apa ini?** KNN (*K-Nearest Neighbors*) menebak kelas data baru dengan melihat `k` data latih terdekat, lalu mengambil kelas terbanyak.
+
+!!! tip "Analogi"
+    Anda pindah ke lingkungan baru dan ingin tahu apakah warganya suka olahraga. Tanya 5 tetangga terdekat; jika 4 suka olahraga, Anda menebak lingkungan itu suka olahraga.
+
+**Mengapa penting?** Idenya sangat sederhana, tanpa asumsi bentuk data, dan menjadi pembanding yang mudah dipahami. Dari model ini kita juga belajar pentingnya *scaling* dan pengaruh `k` pada *overfitting*.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Cara KNN memilih tetangga dan memutuskan kelas.
+2. Pengaruh nilai `k`, *scaling*, dan pembobotan jarak.
+3. Hubungan `k` dengan *overfitting* dan *underfitting*.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Tetangga terdekat | Data latih dengan jarak terkecil ke data baru |
+| `k` | Jumlah tetangga yang dilihat |
+| *Overfitting* | Model terlalu menghafal data latih |
+| *Underfitting* | Model terlalu sederhana untuk menangkap pola |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan cara KNN mengklasifikasikan berdasarkan tetangga terdekat.

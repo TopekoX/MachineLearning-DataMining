@@ -1,5 +1,29 @@
 # Support Vector Machine (SVM)
 
+## Gambaran singkat
+
+**Apa ini?** SVM mencari batas pemisah antara dua kelas dengan jarak selebar mungkin ke data terdekat dari kedua sisi.
+
+!!! tip "Analogi"
+    Dua kelompok anak di lapangan perlu dipisah dengan tali. Anda menarik tali di jalur paling longgar, sejauh mungkin dari anak terdekat di kedua sisi. Anak terdekat itulah penentu posisi tali (*support vector*).
+
+**Mengapa penting?** SVM efektif pada data berdimensi cukup banyak dan bisa membuat batas melengkung lewat kernel. Namun pengaturannya (`C`, `gamma`) sensitif dan *scaling* wajib.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Ide margin maksimum dan *support vector*.
+2. Peran `C`, kernel, dan `gamma`.
+3. Mengapa *scaling* wajib dan akibat `gamma` yang salah.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Margin | Lebar jalur kosong antara dua kelas |
+| *Support vector* | Data terdekat yang menentukan batas |
+| Kernel | Cara membuat batas melengkung |
+| `gamma` | Seberapa lokal pengaruh satu titik |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan ide *margin* maksimum dan peran *support vector*.

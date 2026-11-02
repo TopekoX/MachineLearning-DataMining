@@ -1,5 +1,29 @@
 # Workflow scikit-learn dan Pipeline
 
+## Gambaran singkat
+
+**Apa ini?** Mengenal cara kerja scikit-learn dan `Pipeline` yang merangkai praproses dan model dalam satu alur.
+
+!!! tip "Analogi"
+    Seperti ban berjalan di pabrik: bahan mentah lewat beberapa stasiun yang selalu berurutan sama, sehingga hasil konsisten dan tidak ada langkah terlewat.
+
+**Mengapa penting?** `Pipeline` mencegah kebocoran data pada validasi silang dan membuat model mudah disimpan serta dipakai ulang.
+
+**Yang akan dipelajari, berurutan:**
+
+1. API scikit-learn: `fit`, `transform`, `predict`, `score`.
+2. `Pipeline` dan `ColumnTransformer` untuk data campuran.
+3. Bagaimana `Pipeline` mencegah kebocoran.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| `fit` | Belajar dari data |
+| `transform` | Menerapkan yang sudah dipelajari |
+| `Pipeline` | Rangkaian langkah sebagai satu kesatuan |
+| `ColumnTransformer` | Praproses berbeda untuk kolom berbeda |
+
 ## Tujuan pembelajaran
 
 - [x] Memahami API scikit-learn: `fit`, `transform`, `predict`, `score`.

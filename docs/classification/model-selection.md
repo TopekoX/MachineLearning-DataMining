@@ -1,5 +1,29 @@
 # Perbandingan dan Pemilihan Model
 
+## Gambaran singkat
+
+**Apa ini?** Cara membandingkan beberapa model klasifikasi secara adil dan memilih yang paling sesuai.
+
+!!! tip "Analogi"
+    Memilih kendaraan: motor irit tetapi tidak muat banyak, mobil nyaman tetapi mahal. Tidak ada yang terbaik untuk semua keperluan; kita menimbang kebutuhan.
+
+**Mengapa penting?** Tidak ada model yang selalu menang. Perbandingan hanya adil jika semua model diuji pada data, potongan validasi, dan metrik yang sama, dan selisih kecil belum tentu berarti.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Sifat umum tiap model dalam satu tabel.
+2. Prosedur perbandingan yang adil tanpa kebocoran data.
+3. Membaca hasil, termasuk ketidakpastiannya.
+4. Memilih model: skor, kestabilan, kemudahan dijelaskan, dan biaya komputasi.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Validasi silang berulang | Menguji beberapa kali dengan pembagian data berbeda |
+| Interpretabilitas | Seberapa mudah model dijelaskan |
+| Simpangan baku | Seberapa bervariasi skor antar-pengujian |
+
 ## Tujuan pembelajaran
 
 - [x] Membandingkan beberapa model klasifikasi secara adil dengan validasi silang berulang tanpa kebocoran data.

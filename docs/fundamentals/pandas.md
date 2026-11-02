@@ -1,5 +1,30 @@
 # pandas
 
+## Gambaran singkat
+
+**Apa ini?** pandas adalah pustaka untuk mengolah data berbentuk tabel, seperti lembar Excel yang bisa diprogram.
+
+!!! tip "Analogi"
+    Bayangkan Excel dengan kemampuan menyaring, mengelompokkan, dan menghitung jutaan baris lewat beberapa baris kode.
+
+**Mengapa penting?** Hampir semua proyek data mining dimulai dengan memuat dan membersihkan tabel. Menguasai pandas menghemat banyak waktu.
+
+**Yang akan dipelajari, berurutan:**
+
+1. `DataFrame` dan `Series`.
+2. Memilih kolom dan baris, dengan syarat.
+3. Meringkas per kelompok dengan `groupby`.
+4. Mendeteksi data hilang dan duplikat, membuat kolom baru.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| `DataFrame` | Tabel: baris = sampel, kolom = variabel |
+| `Series` | Satu kolom |
+| `groupby` | Mengelompokkan baris lalu meringkasnya |
+| `NaN` | Nilai kosong |
+
 ## Tujuan pembelajaran
 
 - [x] Memahami `DataFrame` dan `Series`.

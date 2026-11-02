@@ -1,5 +1,29 @@
 # Konsep Klastering dan Persiapan Data
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran pertama: memahami apa itu klastering dan menyiapkan data sebelum dikelompokkan.
+
+!!! tip "Analogi"
+    Seorang guru baru menerima 600 siswa yang belum dikenal. Ia mengelompokkan siswa menurut kebiasaan mereka tanpa daftar kelompok yang sudah jadi. Setelah itu ia bertanya: apakah kelompok ini masuk akal dan berguna? Pertanyaan itu sama dengan pertanyaan pada klastering.
+
+**Mengapa penting?** Klastering tidak punya kunci jawaban, jadi kita tidak bisa menghitung "berapa persen benar". Kita perlu cara lain untuk menilai hasilnya, dan data harus diperiksa lebih dulu agar hasilnya tidak menyesatkan.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Arti klastering dan bedanya dengan klasifikasi.
+2. Cara menilai hasil tanpa label (pengganti data uji).
+3. Memeriksa data (EDA) untuk melihat ukuran, skala, dan kemiringan tiap fitur.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Klaster (*cluster*) | Satu kelompok data yang mirip |
+| Fitur (*feature*) | Satu kolom informasi, misalnya umur atau total belanja |
+| Tanpa label (*unsupervised*) | Data tidak disertai jawaban benar |
+| EDA | Memeriksa data lebih dulu sebelum dianalisis |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan *unsupervised learning* dan tujuan klastering.
@@ -21,7 +45,7 @@ Penggunaan umum: segmentasi pelanggan, pengelompokan dokumen, deteksi pola, komp
 
 ## Mengapa tidak ada "data uji berlabel"?
 
-Pada klasifikasi, data uji memiliki label sehingga kita bisa menghitung kesalahan. Pada klastering tidak ada label, jadi tidak ada yang bisa "benar" atau "salah" secara langsung. Yang dapat diuji:
+Pada klasifikasi, data uji punya jawaban benar sehingga kita bisa menghitung berapa tebakan yang salah. Pada klastering tidak ada jawaban benar, jadi tidak ada yang langsung bisa disebut "benar" atau "salah". Sebagai gantinya, kita menilai hasil dari empat sisi:
 
 1. **Kestabilan**: apakah struktur yang sama ditemukan pada data lain atau sampel berbeda? Praproses tetap dipelajari dari data latih, lalu data baru ditempatkan ke klaster yang ada.
 2. **Kualitas internal**: seberapa padat dan terpisah klasternya (silhouette, Davies-Bouldin).
@@ -62,6 +86,8 @@ Program `examples/clustering/concepts_data.py`; program lengkap ada di akhir bag
 
 **Interpretasi.** 600 baris, tanpa data hilang atau duplikat. **Skala sangat berbeda**: `avg_basket` rata-rata 207 (maksimum 834) sedangkan `visits_per_month` rata-rata 4,9; `recency_days` bersimpangan baku 99, `age` 11,8. Algoritma berbasis jarak akan didominasi fitur berskala besar, sehingga *scaling* wajib (lihat [lesson berikutnya](scaling-distance.md)). `annual_spend` miring ke kanan (skewness 2,08, maksimum 101 vs rata-rata 13); transformasi log membantu (dipakai pada [profil klaster](profiling.md)).
 
+**Dengan kata sederhana:** Data bersih dan cukup, tetapi satuan tiap kolom sangat berbeda (ratusan vs satuan). Itu sebabnya *scaling* perlu, dan fitur belanja yang miring perlu ditransformasi log.
+
 ### Langkah 2: kelompok sebenarnya (hanya untuk validasi eksternal)
 
 ```python title="concepts_data.py" linenums="19"
@@ -97,6 +123,8 @@ Kolom `segment_true` menyimpan kelompok yang dipakai pembangkit data: pemburu di
 
 **Interpretasi.** ARI kestabilan 0,957: model dari data latih dan klastering mandiri pada data uji hampir sama, sehingga struktur yang ditemukan bukan kebetulan satu sampel.
 
+**Dengan kata sederhana:** Nilai mendekati 1 berarti dua cara mengelompokkan menghasilkan pembagian hampir sama, jadi kelompok yang ditemukan bukan kebetulan.
+
 ### Langkah 4: validasi eksternal
 
 ```python title="concepts_data.py" linenums="33"
@@ -108,6 +136,8 @@ Kolom `segment_true` menyimpan kelompok yang dipakai pembangkit data: pemburu di
 ```
 
 **Interpretasi.** ARI penempatan data uji terhadap kelompok sebenarnya 0,849 (hanya mungkin karena data sintetis). Struktur cukup jelas tetapi tidak sempurna; tiap kelompok sengaja dibuat saling tumpang tindih.
+
+**Dengan kata sederhana:** Kelompok baru cocok dengan kelompok sebenarnya di sekitar 85%. Cukup baik, tetapi tidak sempurna karena kelompoknya memang sengaja dibuat saling tumpang tindih.
 
 ??? example "Program lengkap (`concepts_data.py`)"
     ```python title="concepts_data.py" linenums="1"

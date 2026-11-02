@@ -2,6 +2,26 @@
 
 Klasifikasi memprediksi **kelas (label kategorik)** dari sebuah data, misalnya email *spam* atau bukan, atau tumor ganas atau jinak. Ini adalah *supervised learning*: model belajar dari data yang labelnya sudah diketahui.
 
+## Mulai dari sini: apa itu klasifikasi?
+
+**Klasifikasi** adalah cara komputer menebak **kategori** sebuah data setelah belajar dari contoh yang jawabannya sudah diketahui.
+
+!!! tip "Analogi"
+    Petugas pos memilah surat ke kotak kota tujuan. Ia belajar dari ribuan surat yang sudah tahu tujuannya, lalu bisa memilah surat baru sendiri.
+
+**Mengapa dipelajari?** Banyak keputusan berbentuk pilihan kategori: email spam atau bukan, pelanggan akan berhenti atau tidak, tumor ganas atau jinak.
+
+### Peta belajar
+
+1. **Apa masalahnya dan bagaimana data diperiksa?** → alur kerja dan data
+2. **Bagaimana data disiapkan dan dibagi dengan aman?** → praproses dan *baseline*
+3. **Model apa saja yang tersedia?** → Logistic Regression, KNN, Decision Tree, Random Forest, SVM, Naive Bayes
+4. **Bagaimana menilai hasilnya?** → evaluasi, kelas tidak seimbang
+5. **Bagaimana memilih dan menyetel model terbaik?** → perbandingan dan optimasi
+6. **Bagaimana memakainya di dunia nyata?** → simpan, deploy, monitor, lalu proyek
+
+Setiap pelajaran dibuka dengan **Gambaran singkat** yang menjelaskan topiknya dengan bahasa sehari-hari.
+
 ## Tujuan pembelajaran
 
 - Merumuskan masalah klasifikasi dan memilih metrik yang sesuai.

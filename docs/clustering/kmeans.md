@@ -1,5 +1,29 @@
 # k-Means
 
+## Gambaran singkat
+
+**Apa ini?** k-Means adalah algoritma klastering paling populer. Kita menentukan jumlah kelompok \(k\), lalu algoritma mencari "titik pusat" tiap kelompok.
+
+!!! tip "Analogi"
+    Anda ingin membangun 3 warung di sebuah kota agar warga tidak jauh berjalan. Mula-mula warung ditaruh sembarang. Tiap warga memilih warung terdekat. Lalu warung dipindah ke tengah-tengah para pelanggannya. Warga memilih lagi, warung pindah lagi, dan seterusnya sampai posisinya tidak berubah. Warung adalah **pusat klaster (centroid)**, warga adalah **data**.
+
+**Mengapa penting?** k-Means cepat, mudah dipahami, dan hasilnya mudah dijelaskan lewat pusat tiap kelompok. Karena itu algoritma ini biasanya menjadi percobaan pertama.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Cara kerja: tetapkan titik ke pusat terdekat, lalu perbarui pusat.
+2. Apa itu *inertia*, ukuran seberapa rapat anggota terhadap pusatnya.
+3. Mengapa hasil bisa berbeda tiap kali dijalankan, dan cara mengatasinya.
+4. Kapan k-Means gagal, yaitu saat bentuk kelompok bukan bulat.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| \(k\) | Jumlah kelompok yang kita minta |
+| *Centroid* | Titik pusat (rata-rata) suatu kelompok |
+| *Inertia* | Total jarak kuadrat semua titik ke pusat kelompoknya; makin kecil makin rapat |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan algoritma k-Means dan fungsi tujuannya (inertia).
@@ -8,18 +32,22 @@
 
 ## Intuisi
 
-k-Means membagi data menjadi \(k\) klaster dengan **pusat (centroid)** masing-masing. Algoritma (Lloyd) mengulang dua langkah sampai tidak berubah:
+k-Means membagi data menjadi \(k\) klaster, masing-masing punya **pusat (centroid)**. Cara kerjanya (algoritma Lloyd):
 
-1. **Tetapkan**: tiap titik masuk ke klaster dengan pusat terdekat.
-2. **Perbarui**: pusat tiap klaster dihitung ulang sebagai **rata-rata** anggotanya.
+1. **Mulai**: pilih \(k\) titik awal sebagai pusat.
+2. **Tetapkan**: tiap titik masuk ke klaster yang pusatnya paling dekat.
+3. **Perbarui**: pindahkan pusat ke **rata-rata** posisi anggotanya.
+4. **Ulangi** langkah 2 dan 3 sampai pusat tidak bergerak lagi.
 
-Tujuannya meminimalkan *inertia* (jumlah kuadrat jarak titik ke pusat klasternya):
+Tujuan akhirnya membuat anggota sedekat mungkin dengan pusatnya. Ukurannya disebut *inertia*, yaitu jumlah kuadrat jarak setiap titik ke pusat klasternya (makin kecil makin rapat):
 
 $$
 J = \sum_{c=1}^{k} \sum_{\mathbf{x}_i \in C_c} \lVert \mathbf{x}_i - \mathbf{\mu}_c \rVert^2
 $$
 
-\(C_c\) anggota klaster \(c\) dan \(\mathbf{\mu}_c\) pusatnya. Algoritma hanya menjamin optimum **lokal**, sehingga hasil bergantung pada titik awal. `k-means++` memilih pusat awal yang tersebar, dan `n_init` mengulang beberapa kali lalu mengambil inertia terkecil.
+\(C_c\) adalah anggota klaster \(c\) dan \(\mathbf{\mu}_c\) pusatnya. Rumus ini hanya menjumlahkan "jarak ke pusat" di seluruh klaster.
+
+**Catatan penting.** Algoritma bisa berhenti di hasil yang cukup baik tetapi bukan yang terbaik (optimum **lokal**), sehingga hasil bergantung pada titik awal. Dua pengaman: `k-means++` memilih pusat awal yang saling berjauhan, dan `n_init` mengulang seluruh proses beberapa kali lalu mengambil hasil dengan inertia terkecil.
 
 | Aspek | Keterangan |
 |---|---|
@@ -69,6 +97,8 @@ Wine terstandardisasi (k=3), lalu uji inisialisasi dan data bulan sabit **sintet
 
 **Interpretasi.** Klaster 2 beralkohol tinggi (13,68), berflavanoid tinggi (3,00), dan berprolin tinggi (1100); klaster 1 berflavanoid rendah (0,82); klaster 0 beralkohol rendah (12,25) dan berprolin rendah (510). Pusat dalam satuan asli memberi profil yang mudah dibaca.
 
+**Dengan kata sederhana:** Dengan melihat pusat dalam satuan asli, tiap klaster bisa diberi ciri: klaster 2 "kuat" (alkohol, flavanoid, dan prolin tinggi), klaster 1 flavanoid rendah, klaster 0 alkohol dan prolin rendah.
+
 ### Langkah 3: memeriksa sifat algoritma
 
 ```python title="kmeans.py" linenums="29"
@@ -99,6 +129,8 @@ Perulangan menjalankan k-Means satu kali per `seed` dengan pusat awal acak.
 
 **Interpretasi.** Tiga seed (1, 2, 3) menghasilkan inertia terbaik 1277,9 (ARI 0,897), tetapi seed 0 menghasilkan 1280,0 (ARI 0,880) dan seed 4 menghasilkan 1282,5 (ARI 0,846): optimum lokal yang lebih buruk. Karena itu `n_init=10` (bawaan) dan `k-means++` dipakai.
 
+**Dengan kata sederhana:** Menjalankan k-Means sekali dengan titik awal kurang beruntung bisa memberi hasil yang lebih buruk. Mengulang beberapa kali dan mengambil yang terbaik (`n_init`) adalah pengaman sederhana.
+
 ### Langkah 5: keterbatasan pada klaster non-bulat
 
 ```python title="kmeans.py" linenums="39"
@@ -112,6 +144,8 @@ Perulangan menjalankan k-Means satu kali per `seed` dengan pusat awal acak.
 ```
 
 **Interpretasi.** ARI hanya 0,233: k-Means memotong ruang dengan batas lurus dan mengasumsikan klaster bulat, padahal bentuk data melengkung. Algoritma berbasis kepadatan seperti [DBSCAN](dbscan.md) cocok untuk bentuk seperti ini.
+
+**Dengan kata sederhana:** k-Means selalu membuat kelompok "bulat". Pada data berbentuk bulan sabit ia memotong lurus dan salah. Jika bentuk kelompok tidak bulat, coba DBSCAN.
 
 ### Langkah 6: gambar
 

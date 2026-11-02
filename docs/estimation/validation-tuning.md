@@ -1,5 +1,28 @@
 # Validasi Silang dan Optimasi Hyperparameter
 
+## Gambaran singkat
+
+**Apa ini?** Menguji dan menyetel model regresi dengan validasi silang yang tepat.
+
+!!! tip "Analogi"
+    Satu ujian tidak cukup menilai murid; beberapa ujian dengan soal berbeda lebih adil. Validasi silang mengulang pengujian pada potongan data berbeda.
+
+**Mengapa penting?** Skor dari satu pembagian data bisa kebetulan. Validasi silang memberi gambaran lebih stabil, dan pencarian pengaturan terbaik harus dihitung dengan jujur.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Validasi silang untuk regresi (tanpa stratifikasi kelas).
+2. Menyetel `alpha` Ridge dan Random Forest.
+3. Membedakan skor terbaik pencarian dan estimasi jujur (*nested CV*).
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| `KFold` | Membagi data menjadi lipatan untuk validasi silang |
+| Skor negatif | Konvensi scikit-learn: galat ditulis negatif agar makin besar makin baik |
+| *Nested CV* | Validasi silang bersarang untuk estimasi yang tidak optimis |
+
 ## Tujuan pembelajaran
 
 - [x] Memakai validasi silang yang sesuai untuk regresi.

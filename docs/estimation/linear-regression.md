@@ -1,5 +1,29 @@
 # Baseline dan Regresi Linear
 
+## Gambaran singkat
+
+**Apa ini?** Membuat *baseline* regresi, lalu model regresi linear yang menarik garis (atau bidang) terbaik melalui data.
+
+!!! tip "Analogi"
+    Menarik garis lurus di antara titik-titik pada grafik luas rumah vs harga, sedekat mungkin ke semua titik. Garis itu dipakai untuk menaksir harga rumah baru.
+
+**Mengapa penting?** Regresi linear sederhana, cepat, dan koefisiennya bisa dibaca (tiap fitur menambah atau mengurangi taksiran sebesar berapa). Ia menjadi titik awal sebelum model rumit.
+
+**Yang akan dipelajari, berurutan:**
+
+1. *Baseline*: selalu menebak rata-rata.
+2. Model dan fungsi tujuan (kuadrat terkecil).
+3. Melatih model dan membaca koefisien dengan hati-hati.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Koefisien | Pengaruh satu fitur terhadap taksiran |
+| Intersep | Nilai taksiran saat semua fitur nol |
+| Residual | Selisih nilai sebenarnya dan taksiran |
+| OLS | Metode memilih garis dengan jumlah kuadrat residual terkecil |
+
 ## Tujuan pembelajaran
 
 - [x] Membuat *baseline* regresi dan membaca metriknya.

@@ -1,5 +1,30 @@
 # Data Transaksi dan Pengodean
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran pembuka aturan asosiasi: memahami data transaksi (keranjang belanja) dan mengubahnya menjadi tabel yang bisa dianalisis.
+
+!!! tip "Analogi"
+    Kasir minimarket mencatat isi setiap keranjang. Dari ribuan struk, kita ingin tahu barang apa yang sering dibeli bersamaan, misalnya roti dengan mentega.
+
+**Mengapa penting?** Komputer tidak bisa membaca daftar belanja mentah. Data harus dibersihkan lalu diubah menjadi tabel ya/tidak (one-hot) agar bisa dihitung.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Arti transaksi, item, dan itemset.
+2. Membersihkan data transaksi.
+3. Mengubah transaksi menjadi matriks *one-hot*.
+4. Menghitung *support* sederhana dan ringkasan keranjang.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Transaksi | Satu keranjang belanja |
+| Item / itemset | Satu barang / kumpulan barang |
+| *One-hot* | Tabel berisi ya (1) atau tidak (0) untuk tiap barang |
+| *Support* | Persentase transaksi yang memuat suatu itemset |
+
 ## Tujuan pembelajaran
 
 - [x] Memahami data transaksi dan analisis keranjang belanja (*market basket analysis*).

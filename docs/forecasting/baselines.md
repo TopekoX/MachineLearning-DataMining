@@ -1,5 +1,29 @@
 # Baseline, Moving Average, dan Exponential Smoothing
 
+## Gambaran singkat
+
+**Apa ini?** Metode peramalan sederhana (naive, seasonal naive, drift, rata-rata bergerak) dan *exponential smoothing* sebagai pembanding.
+
+!!! tip "Analogi"
+    Menebak cuaca besok dengan "sama seperti hari ini" (naive) atau "sama seperti hari ini tahun lalu" (seasonal naive). Sederhana, tetapi sering sulit dikalahkan.
+
+**Mengapa penting?** Model rumit hanya berguna jika mengalahkan metode sederhana ini. Mulai dari sini mencegah kita memakai model canggih tanpa alasan.
+
+**Yang akan dipelajari, berurutan:**
+
+1. *Baseline*: naive, seasonal naive, drift, rata-rata bergerak.
+2. *Exponential smoothing* (SES, Holt, Holt-Winters).
+3. Memilih metode pada data validasi lalu menguji sekali.
+4. Menafsirkan hasil dari satu titik asal dengan hati-hati.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Seasonal naive* | Menyalin nilai dari musim yang sama sebelumnya |
+| *Exponential smoothing* | Rata-rata berbobot yang menekankan data terbaru |
+| Horizon | Berapa langkah ke depan yang diramal |
+
 ## Tujuan pembelajaran
 
 - [x] Membuat *baseline* forecasting: naive, seasonal naive, drift, dan rata-rata bergerak.

@@ -1,5 +1,28 @@
 # Agglomerative Clustering
 
+## Gambaran singkat
+
+**Apa ini?** Klastering bertingkat: mulai dari setiap data sebagai kelompok sendiri, lalu dua kelompok yang paling dekat digabung berulang-ulang sampai tinggal satu kelompok besar.
+
+!!! tip "Analogi"
+    Seperti menyusun silsilah keluarga dari bawah. Mula-mula tiap orang sendiri. Kakak-adik digabung menjadi satu keluarga kecil, lalu keluarga yang bersepupu digabung menjadi keluarga besar, dan seterusnya. Hasilnya berupa pohon yang dapat "dipotong" pada tingkat mana saja.
+
+**Mengapa penting?** Kita bisa melihat seluruh riwayat penggabungan dalam satu gambar (**dendrogram**), lalu memilih jumlah kelompok sesudah melihat gambarnya. Hasilnya juga tetap sama setiap dijalankan.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Cara kerja penggabungan dari bawah ke atas.
+2. Empat cara mengukur jarak antar-kelompok (*linkage*): Ward, complete, average, single.
+3. Membaca dendrogram dan memotongnya untuk mendapat jumlah kelompok.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Dendrogram | Diagram pohon yang menunjukkan urutan dan jarak penggabungan |
+| *Linkage* | Aturan menghitung jarak antara dua kelompok |
+| Ambang jarak | Batas ketinggian untuk memotong dendrogram |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan klastering hierarkis aglomeratif dan dendrogram.
@@ -8,9 +31,15 @@
 
 ## Intuisi
 
-Klastering aglomeratif bekerja **dari bawah ke atas**: awalnya tiap titik adalah satu klaster, lalu dua klaster terdekat digabung berulang sampai tersisa satu. Riwayat penggabungan digambar sebagai **dendrogram**; memotongnya pada ketinggian tertentu menghasilkan jumlah klaster tertentu.
+Klastering aglomeratif bekerja **dari bawah ke atas**:
 
-Jarak antar-klaster ditentukan oleh ***linkage***:
+1. Awalnya setiap titik adalah satu klaster sendiri.
+2. Cari dua klaster yang paling dekat, lalu gabungkan.
+3. Ulangi sampai hanya tersisa satu klaster.
+
+Riwayat penggabungan digambar sebagai **dendrogram** (pohon terbalik). Makin tinggi sebuah cabang, makin jauh dua klaster yang digabung di sana. Jika pohon dipotong mendatar pada ketinggian tertentu, jumlah cabang yang terpotong adalah jumlah klaster.
+
+Pertanyaannya: bagaimana mengukur jarak antara dua klaster yang masing-masing berisi banyak titik? Jawabannya ditentukan oleh ***linkage***:
 
 | Linkage | Jarak antar-klaster | Kecenderungan |
 |---|---|---|
@@ -51,6 +80,8 @@ Wine terstandardisasi. Program `examples/clustering/agglomerative.py`; program l
 
 **Interpretasi.** Ward: ARI 0,790 dan silhouette 0,277 dengan klaster seimbang (58, 56, 64). Complete: ARI 0,577. **Average dan single gagal**: satu klaster menampung 174 dari 178 titik dan dua klaster lain hanya berisi 1 sampai 3 titik (ARI ≈ 0), efek rantai dari beberapa titik terpencil. Untuk data ini Ward paling cocok, sama seperti sifat k-Means.
 
+**Dengan kata sederhana:** Ward paling cocok di sini karena menghasilkan kelompok berukuran seimbang dan paling mirip kelompok sebenarnya. Average dan single gagal karena beberapa titik terpencil "menarik" hampir semua data ke satu kelompok.
+
 ### Langkah 2: matriks linkage dan lonjakan jarak penggabungan
 
 **Konsep.** SciPy menyimpan riwayat penggabungan dalam *matriks linkage*: tiap baris adalah satu penggabungan, dan kolom ketiga adalah **jarak penggabungannya**. Lonjakan besar pada jarak berarti dua klaster yang digabung sebenarnya berjauhan.
@@ -66,6 +97,8 @@ Wine terstandardisasi. Program `examples/clustering/agglomerative.py`; program l
 ```
 
 **Interpretasi.** Jarak penggabungan Ward untuk 8 penggabungan terakhir: 10,2; 10,4; 11,4; 11,7; 12,2; 12,6; **27,7**; 35,4. Ada lonjakan besar (selisih 15,1) sebelum dua penggabungan terakhir: menggabungkan klaster yang jauh menunjukkan struktur alami sekitar **tiga klaster**, yaitu pemotongan sebelum lonjakan.
+
+**Dengan kata sederhana:** Cari titik di dendrogram tempat jarak penggabungan tiba-tiba melonjak. Sebelum lonjakan, yang digabung masih mirip; sesudahnya, yang digabung sudah berbeda jauh. Di sini lonjakan muncul sebelum dua penggabungan terakhir, jadi tiga kelompok adalah pilihan yang wajar.
 
 ### Langkah 3: memotong dengan ambang jarak
 

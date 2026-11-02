@@ -1,5 +1,30 @@
 # Validasi Kronologis dan Metrik Forecasting
 
+## Gambaran singkat
+
+**Apa ini?** Cara membagi dan menguji data deret waktu dengan benar: kronologis, dan tidak boleh diacak.
+
+!!! tip "Analogi"
+    Anda tidak boleh "mengintip" skor besok untuk menebak skor kemarin. Latihan harus memakai masa lalu, ujian memakai masa depan.
+
+**Mengapa penting?** Validasi silang acak membocorkan masa depan ke data latih sehingga skor tampak bagus tetapi palsu.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Pembagian kronologis: latih, validasi, uji.
+2. Mengapa validasi silang acak menyesatkan.
+3. *Rolling-origin evaluation*.
+4. Metrik MAE, RMSE, sMAPE, dan MASE.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Rolling origin* | Menguji berulang dengan titik awal prediksi yang bergeser maju |
+| sMAPE | Persentase galat simetris |
+| MASE | Galat dibanding galat metode naive; di bawah 1 berarti lebih baik |
+| Kebocoran | Data masa depan ikut dipakai saat belajar |
+
 ## Tujuan pembelajaran
 
 - [x] Membagi deret waktu secara kronologis menjadi latih, validasi, dan uji.

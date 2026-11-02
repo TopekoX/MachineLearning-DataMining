@@ -1,5 +1,30 @@
 # ARIMA dan SARIMA
 
+## Gambaran singkat
+
+**Apa ini?** ARIMA dan SARIMA adalah model statistik klasik yang meramal dari nilai dan galat masa lalu.
+
+!!! tip "Analogi"
+    Menebak nilai besok dari beberapa hari terakhir (AR), setelah menghilangkan tren (I), dan memperbaiki tebakan dari kesalahan kemarin (MA).
+
+**Mengapa penting?** ARIMA memberi interval prediksi, yaitu rentang kemungkinan, bukan hanya satu angka. SARIMA menambahkan pola musiman.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Tiga komponen AR, I, MA dan bagian musiman.
+2. Membandingkan orde dengan AIC pada data latih.
+3. Membaca dan menguji interval prediksi.
+4. Memeriksa residual dengan uji Ljung-Box.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| AR / MA | Memakai nilai / galat sebelumnya untuk meramal |
+| Diferensiasi (I) | Mengurangi nilai dengan nilai sebelumnya untuk menghilangkan tren |
+| AIC | Skor pemilihan model; makin kecil makin baik |
+| Interval prediksi | Rentang kemungkinan nilai masa depan |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan komponen AR, I, dan MA pada ARIMA, serta bagian musiman pada SARIMA.

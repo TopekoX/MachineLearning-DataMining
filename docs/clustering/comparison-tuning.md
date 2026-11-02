@@ -1,5 +1,28 @@
 # Perbandingan Algoritma dan Optimasi Parameter
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran untuk membandingkan beberapa algoritma klastering pada data yang sama dan menyetel pengaturannya (*hyperparameter*).
+
+!!! tip "Analogi"
+    Anda mencoba beberapa jalan menuju kantor. Satu jalan terpendek di peta, tetapi melewati pasar yang macet. Memilih jalan hanya dari angka jarak bisa menyesatkan. Begitu pula memilih algoritma hanya dari satu angka metrik.
+
+**Mengapa penting?** Tidak ada algoritma yang terbaik untuk semua data. Di sisi lain, tanpa label kita menyetel parameter memakai metrik internal, dan metrik itu bisa menyukai hasil yang tidak berguna.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Perbandingan k-Means, Agglomerative, DBSCAN, dan Gaussian Mixture.
+2. Menyetel parameter DBSCAN dengan mencoba kombinasi `eps` dan `min_samples`.
+3. Bahaya metrik internal: skor bagus belum tentu hasil bagus.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Hyperparameter* | Pengaturan algoritma yang kita pilih sendiri sebelum pelatihan |
+| *Grid search* | Mencoba semua kombinasi pengaturan dalam satu daftar |
+| Gaussian Mixture | Algoritma yang menganggap data berasal dari campuran sebaran normal |
+
 ## Tujuan pembelajaran
 
 - [x] Membandingkan algoritma klastering pada data yang sama.
@@ -82,6 +105,8 @@ Dua perulangan bersarang mencoba semua pasangan `eps` (5 nilai) dan `min_samples
 ```
 
 **Interpretasi.** ARI antara k-Means dan Ward 0,853 (mirip tetapi tidak identik) dan antara k-Means dan Gaussian Mixture 1,000. **Kesepakatan antar-algoritma** adalah petunjuk tambahan: bila beberapa algoritma berbeda menemukan pengelompokan yang mirip, struktur itu lebih mungkin nyata. Kesimpulan bergantung data: pada Wine, algoritma berbasis pusat unggul; pada bulan sabit ([DBSCAN](dbscan.md)) justru DBSCAN. Pilih algoritma berdasarkan bentuk data dan tujuan, bukan peringkat satu metrik.
+
+**Dengan kata sederhana:** Jika beberapa algoritma yang cara kerjanya berbeda menemukan kelompok yang sama, kelompok itu kemungkinan memang ada di data, bukan akibat satu algoritma saja.
 
 ??? example "Program lengkap (`comparison_tuning.py`)"
     ```python title="comparison_tuning.py" linenums="1"

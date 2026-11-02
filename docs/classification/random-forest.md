@@ -1,5 +1,29 @@
 # Random Forest
 
+## Gambaran singkat
+
+**Apa ini?** Random Forest menggabungkan banyak pohon keputusan, lalu hasilnya diambil lewat pemungutan suara.
+
+!!! tip "Analogi"
+    Daripada bertanya pada satu ahli, Anda bertanya pada 100 orang yang masing-masing melihat sebagian data, lalu mengambil jawaban terbanyak. Kesalahan acak satu orang tertutup oleh yang lain.
+
+**Mengapa penting?** Satu pohon mudah salah karena terlalu bergantung pada data latih. Gabungan banyak pohon jauh lebih stabil dan sering akurat tanpa banyak penyetelan.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Cara tiap pohon dibuat berbeda (sampel bootstrap dan fitur acak).
+2. Pengaruh `n_estimators` dan `max_features`.
+3. Skor *out-of-bag* dan dua jenis *feature importance*.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Bagging* | Melatih banyak model pada contoh data acak lalu menggabungkannya |
+| Bootstrap | Sampel acak dengan pengembalian dari data latih |
+| *Out-of-bag* (OOB) | Data yang tidak terpilih, dipakai sebagai data uji gratis |
+| `n_estimators` | Jumlah pohon |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan *bagging* dan pemilihan fitur acak pada Random Forest.

@@ -1,5 +1,29 @@
 # Memilih Jumlah Klaster dan Validasi
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran tentang dua pertanyaan: "berapa kelompok yang sebaiknya dibuat?" dan "apakah kelompok yang terbentuk sudah baik?"
+
+!!! tip "Analogi"
+    Anda membagi murid kelas menjadi beberapa tim. Dua tim terlalu besar dan beragam, sedangkan dua puluh tim terlalu kecil untuk berguna. Anda mencari jumlah tim yang anggotanya kompak dan antartimnya jelas berbeda. Ukuran "kompak" dan "jelas berbeda" itulah yang dihitung metrik pada pelajaran ini.
+
+**Mengapa penting?** Algoritma seperti k-Means menurut saja pada \(k\) yang kita pilih, bahkan jika \(k\) itu tidak cocok. Tanpa label, kita perlu alat ukur untuk memilih \(k\) dan memeriksa kualitas hasil.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Metrik internal (dihitung dari data saja): *elbow*, silhouette, Davies-Bouldin, Calinski-Harabasz.
+2. Kestabilan: apakah kelompok tetap sama jika data diambil ulang?
+3. Validasi eksternal (ARI, NMI): membandingkan dengan label acuan, hanya bila label itu ada.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Metrik internal | Nilai kualitas yang dihitung hanya dari data dan hasil kelompok |
+| Silhouette | Nilai -1 sampai 1; makin dekat 1, kelompok makin jelas terpisah |
+| Kestabilan | Hasil tetap mirip meski data sedikit berubah |
+| Validasi eksternal | Mencocokkan hasil dengan label yang sudah diketahui |
+
 ## Tujuan pembelajaran
 
 - [x] Memakai *elbow*, silhouette, Davies-Bouldin, dan Calinski-Harabasz untuk memilih \(k\).
@@ -8,7 +32,7 @@
 
 ## Metrik internal
 
-Metrik internal menilai klaster tanpa label, dari kepadatan dan keterpisahan:
+Metrik internal menilai klaster **tanpa label**, hanya dari dua hal: apakah anggota satu klaster rapat (kepadatan), dan apakah antar-klaster berjauhan (keterpisahan). Tidak ada metrik tunggal yang selalu benar, jadi gunakan beberapa sekaligus.
 
 | Metrik | Arah terbaik | Arti |
 |---|---|---|
@@ -17,7 +41,7 @@ Metrik internal menilai klaster tanpa label, dari kepadatan dan keterpisahan:
 | Davies-Bouldin | Minimum | Rasio sebaran dalam klaster terhadap jarak antar-klaster |
 | Calinski-Harabasz | Maksimum | Rasio variasi antar-klaster terhadap dalam-klaster |
 
-Untuk satu titik \(i\) dengan jarak rata-rata ke klasternya \(a_i\) dan jarak rata-rata ke klaster terdekat lainnya \(b_i\):
+**Cara kerja silhouette.** Untuk setiap titik \(i\), tanyakan: seberapa dekat saya dengan teman satu klaster (\(a_i\), jarak rata-rata), dibandingkan dengan klaster tetangga terdekat (\(b_i\), jarak rata-rata)? Nilainya:
 
 $$
 s_i = \frac{b_i - a_i}{\max(a_i, b_i)}
@@ -58,6 +82,8 @@ Wine terstandardisasi, k-Means dengan \(k = 2, \dots, 8\). Kolom `ARI_vs_kultiva
 
 **Interpretasi.** **Tiga metrik internal sepakat pada \(k=3\)**: silhouette tertinggi (0,285), Davies-Bouldin terendah (1,389), dan Calinski-Harabasz tertinggi (70,9). Tidak selalu sesepakat ini. Silhouette 0,285 tergolong rendah: ada struktur, tetapi klaster saling berdekatan (pedoman umum: > 0,5 kuat, 0,25–0,5 lemah; ini *rule of thumb*, bukan standar). Validasi eksternal: ARI tertinggi pada \(k=3\) (0,897); pada \(k=2\) turun ke 0,374 karena dua kultivar digabung.
 
+**Dengan kata sederhana:** Tiga metrik menunjuk angka yang sama, jadi kita lebih yakin memilih \(k=3\). Namun silhouette 0,285 menunjukkan kelompok belum terpisah tegas, sehingga skor bagus tidak berarti kelompok sempurna.
+
 ### Langkah 2: metode siku (*elbow*)
 
 ```python title="choose_k.py" linenums="37"
@@ -71,6 +97,8 @@ Wine terstandardisasi, k-Means dengan \(k = 2, \dots, 8\). Kolom `ARI_vs_kultiva
 ```
 
 **Interpretasi.** Inertia turun 23,0% dari \(k=2\) ke \(k=3\), tetapi hanya 8,0% (\(k=4\)), 5,6% (\(k=5\)), dan seterusnya sekitar 5%: siku jelas di \(k=3\). Pada banyak data siku tidak setegas ini dan sulit ditentukan.
+
+**Dengan kata sederhana:** Pada grafik *elbow*, penurunan tajam berhenti di \(k=3\); sesudahnya menambah kelompok hanya memberi perbaikan kecil. Titik tekukan itulah "siku" yang dicari.
 
 ### Langkah 3: kestabilan dengan bootstrap
 
@@ -93,6 +121,8 @@ Wine terstandardisasi, k-Means dengan \(k = 2, \dots, 8\). Kolom `ARI_vs_kultiva
 ```
 
 **Interpretasi.** \(k=3\) sangat stabil (ARI 0,961) sedangkan \(k=2\) (0,675), \(k=4\) (0,781), \(k=5\) (0,631), dan \(k=6\) (0,661) kurang stabil. Kestabilan memberi bukti tambahan yang tidak bergantung pada label.
+
+**Dengan kata sederhana:** \(k=3\) menghasilkan kelompok yang hampir sama meski data diambil ulang, sedangkan angka lain berubah-ubah. Hasil yang stabil lebih bisa dipercaya.
 
 ### Langkah 4: gambar elbow dan silhouette
 

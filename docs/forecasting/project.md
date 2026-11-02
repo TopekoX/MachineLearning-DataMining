@@ -1,5 +1,30 @@
 # Proyek: Meramalkan Penjualan Bulanan End-to-End
 
+## Gambaran singkat
+
+**Apa ini?** Proyek penutup yang merangkai alur peramalan: dari data mentah sampai ramalan 12 bulan dengan interval.
+
+!!! tip "Analogi"
+    Seperti ujian praktik setelah belajar teori: semua langkah dijalankan berurutan.
+
+**Mengapa penting?** Di dunia nyata setiap langkah saling terkait. Proyek ini memperlihatkan alur utuh dan tempat paling mudah terjadi kesalahan.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Memeriksa data dan memisahkan 12 bulan terakhir sebagai uji.
+2. Membandingkan tiga metode dengan *rolling origin*.
+3. Evaluasi sekali pada data uji.
+4. Melatih ulang pada seluruh data dan meramal dengan interval 95%.
+5. Menyimpan model.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Data uji | 12 bulan terakhir yang tidak disentuh sampai evaluasi akhir |
+| Interval 95% | Rentang yang diharapkan memuat nilai nyata 95% dari waktu |
+| SARIMA | ARIMA dengan komponen musiman |
+
 ## Tujuan proyek
 
 Menerapkan alur forecasting lengkap: menyiapkan deret, membagi data kronologis, membandingkan metode dengan *rolling origin*, mengevaluasi sekali pada data uji, melatih ulang pada seluruh data, memprediksi 12 bulan ke depan dengan interval, dan menyimpan model.

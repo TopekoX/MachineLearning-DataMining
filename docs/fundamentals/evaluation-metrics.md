@@ -1,5 +1,30 @@
 # Metrik Evaluasi Machine Learning
 
+## Gambaran singkat
+
+**Apa ini?** Memperkenalkan cara mengukur kinerja model: metrik klasifikasi dan regresi, dengan contoh hitung tangan.
+
+!!! tip "Analogi"
+    Nilai ujian bisa berupa persentase benar (klasifikasi) atau selisih dari kunci (regresi). Pilihan ukuran tergantung apa yang dianggap penting.
+
+**Mengapa penting?** Metrik yang salah memberi rasa aman palsu. Akurasi 95% bisa menipu jika kelas penting sangat langka.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Metrik klasifikasi: *accuracy*, *precision*, *recall*, F1.
+2. Metrik regresi: MAE, MSE, RMSE, R².
+3. Mengapa akurasi menyesatkan pada data tidak seimbang.
+4. Memilih metrik sesuai biaya kesalahan.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Accuracy* | Persentase tebakan yang benar |
+| *Precision* / *recall* | Ketepatan tebakan positif / kemampuan menemukan semua positif |
+| MAE / RMSE | Besar rata-rata kesalahan regresi |
+| R² | Seberapa banyak variasi target dijelaskan model |
+
 ## Tujuan pembelajaran
 
 - [x] Menghitung dan menafsirkan metrik dasar klasifikasi: *accuracy*, *precision*, *recall*, F1.

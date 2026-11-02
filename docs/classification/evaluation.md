@@ -1,5 +1,30 @@
 # Evaluasi Model Klasifikasi
 
+## Gambaran singkat
+
+**Apa ini?** Cara membaca dan memilih ukuran kinerja model klasifikasi: *confusion matrix*, precision, recall, F1, ROC-AUC, dan PR-AUC.
+
+!!! tip "Analogi"
+    Dokter bisa salah dua arah: menyatakan sehat padahal sakit, atau menyatakan sakit padahal sehat. Dampak keduanya berbeda, jadi satu angka "akurasi" tidak cukup.
+
+**Mengapa penting?** Model dengan akurasi 95% bisa tidak berguna jika kelas penting sangat langka. Memilih metrik yang sesuai dengan biaya kesalahan menentukan apakah model benar-benar membantu.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Dari probabilitas ke prediksi lewat ambang (*threshold*).
+2. *Confusion matrix* dan metrik turunannya.
+3. Kurva ROC dan PR serta kapan memakainya.
+4. Menggeser ambang untuk menukar precision dan recall.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| *Precision* | Dari yang ditebak positif, berapa yang benar |
+| *Recall* | Dari yang sebenarnya positif, berapa yang tertangkap |
+| F1 | Rata-rata seimbang precision dan recall |
+| Ambang | Batas probabilitas untuk menyebut data positif |
+
 ## Tujuan pembelajaran
 
 - [x] Membaca *confusion matrix* dan menurunkan metrik darinya.

@@ -1,5 +1,30 @@
 # Praproses, Pembagian Data, dan Baseline
 
+## Gambaran singkat
+
+**Apa ini?** Pelajaran tentang menyiapkan data, membaginya menjadi data latih dan uji, dan membuat model paling sederhana sebagai pembanding (*baseline*).
+
+!!! tip "Analogi"
+    Soal ujian tidak boleh bocor saat latihan. Data uji adalah "soal ujian" yang harus disimpan rapat. *Baseline* seperti nilai rata-rata kelas: kalau model canggih tidak mengalahkannya, model itu belum berguna.
+
+**Mengapa penting?** Kesalahan praproses yang paling umum adalah kebocoran data (informasi data uji ikut dipakai saat belajar), yang membuat nilai tampak bagus tetapi palsu. *Baseline* memberi ukuran apakah sebuah model benar-benar memberi nilai tambah.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Memutuskan praproses dari hasil EDA.
+2. Membagi data secara berstrata sebelum apa pun dipelajari.
+3. Membuat *baseline* sebagai pembanding.
+4. Melihat pengaruh *scaling* pada model sederhana.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Data latih / uji | Data untuk belajar / data untuk pengujian akhir |
+| Stratifikasi | Pembagian yang menjaga proporsi kelas tetap sama |
+| *Baseline* | Model paling sederhana sebagai pembanding |
+| Kebocoran data | Informasi data uji ikut dipakai saat pelatihan |
+
 ## Tujuan pembelajaran
 
 - [x] Menentukan praproses yang diperlukan klasifikasi berdasarkan temuan EDA.

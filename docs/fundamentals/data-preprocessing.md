@@ -1,5 +1,30 @@
 # Pembersihan dan Praproses Data
 
+## Gambaran singkat
+
+**Apa ini?** Membersihkan dan menyiapkan data: menangani duplikat, data hilang, outlier, mengubah kategori, dan *scaling*.
+
+!!! tip "Analogi"
+    Sebelum memasak, bahan dicuci dan dipotong. Model, seperti koki, hanya bisa menghasilkan sebaik bahan yang diberikan.
+
+**Mengapa penting?** Data mentah hampir selalu kotor. Praproses yang salah, terutama jika memakai informasi dari data uji, menimbulkan kebocoran data.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Menangani duplikat, data hilang, dan outlier dengan alasan jelas.
+2. *One-hot encoding* untuk kategori.
+3. *Scaling* dan kapan memakainya.
+4. Praproses hanya "belajar" dari data latih.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Imputasi | Mengisi nilai yang hilang |
+| *One-hot encoding* | Mengubah kategori menjadi kolom 0/1 |
+| *Scaling* | Menyamakan skala fitur |
+| Kebocoran data | Informasi data uji ikut dipakai saat belajar |
+
 ## Tujuan pembelajaran
 
 - [x] Menangani duplikat, data hilang, dan *outlier* dengan alasan yang jelas.

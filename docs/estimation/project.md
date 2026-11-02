@@ -1,5 +1,30 @@
 # Proyek: Memperkirakan Harga Rumah End-to-End
 
+## Gambaran singkat
+
+**Apa ini?** Proyek penutup yang merangkai alur regresi: dari data mentah sampai model taksiran harga rumah siap pakai.
+
+!!! tip "Analogi"
+    Seperti ujian praktik setelah belajar teori: semua langkah dijalankan berurutan.
+
+**Mengapa penting?** Di dunia nyata keputusan di satu langkah (misalnya mengubah target ke log) berdampak pada langkah lain. Proyek ini memperlihatkan alur itu secara utuh.
+
+**Yang akan dipelajari, berurutan:**
+
+1. EDA singkat dan pembagian data uji.
+2. Praproses dalam `ColumnTransformer`.
+3. Membandingkan *baseline*, Ridge, dan Random Forest, dengan dan tanpa target log.
+4. Menyetel, evaluasi akhir, analisis galat per kecamatan.
+5. Menyimpan model.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Target log | Memodelkan logaritma harga agar sebaran lebih seimbang |
+| `TransformedTargetRegressor` | Alat yang melatih pada target yang diubah lalu mengembalikannya ke satuan asli |
+| Galat per kelompok | Mengecek apakah kesalahan merata di tiap kecamatan |
+
 ## Tujuan proyek
 
 Menerapkan seluruh alur regresi pada data tabular bertipe campuran: EDA singkat, *pipeline* praproses, *baseline*, perbandingan model, keputusan transformasi target, optimasi ringan, evaluasi akhir, analisis galat per kelompok, dan penyimpanan.

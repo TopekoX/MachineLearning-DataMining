@@ -1,5 +1,29 @@
 # Proyek: Segmentasi Pelanggan Toko Online
 
+## Gambaran singkat
+
+**Apa ini?** Proyek penutup yang merangkai semua pelajaran klastering menjadi satu alur kerja nyata, dari data mentah sampai rekomendasi tindakan.
+
+!!! tip "Analogi"
+    Seperti ujian praktik setelah belajar teori mengemudi: Anda tidak lagi mempelajari satu bagian, tetapi menjalankan semuanya berurutan, mulai dari menyalakan mesin sampai tiba di tujuan.
+
+**Mengapa penting?** Di dunia nyata, langkah-langkah itu tidak berdiri sendiri. Proyek ini menunjukkan bagaimana keputusan di satu langkah memengaruhi langkah berikutnya.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Memeriksa data (EDA) dan mengenali *outlier*.
+2. Praproses: transformasi log dan *scaling*.
+3. Memilih \(k\) dengan metrik internal dan kestabilan.
+4. Melatih, membandingkan, memprofilkan, dan menamai segmen.
+5. Merumuskan tindakan bisnis, menyimpan pipeline, dan menempatkan pelanggan baru.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| RFM | *Recency* (kapan terakhir beli), *Frequency* (seberapa sering), *Monetary* (berapa banyak belanja) |
+| Segmentasi | Membagi pelanggan ke kelompok bermakna |
+
 ## Tujuan proyek
 
 Menerapkan alur klastering lengkap: EDA, praproses (log dan *scaling*), pemilihan \(k\) dengan metrik internal dan kestabilan, perbandingan dengan algoritma lain, profil dan nama segmen, tindakan bisnis, penempatan pelanggan baru, dan penyimpanan pipeline.
@@ -73,6 +97,8 @@ Untuk tiap `k` dari 2 sampai 6: melatih k-Means, lalu 20 kali menghitung kestabi
 
 **Interpretasi.** \(k=3\) terbaik pada ketiga ukuran: silhouette 0,446 (tertinggi), Davies-Bouldin 0,815 (terendah), dan kestabilan ARI 0,990 (tertinggi); \(k=2\) (0,924), \(k=4\) (0,907), \(k=5\) (0,871), \(k=6\) (0,917). Kesepakatan ini membuat \(k=3\) pilihan yang kuat, dan sejalan dengan kebutuhan bisnis (tiga kelompok mudah dikelola).
 
+**Dengan kata sederhana:** Tiga ukuran berbeda sama-sama memilih \(k=3\), sehingga keputusan ini punya dasar kuat dan bukan sekadar satu angka.
+
 ### Langkah 4: model akhir dan pembanding
 
 ```python title="project.py" linenums="49"
@@ -100,6 +126,8 @@ k-Means dengan \(k=3\) dilatih, lalu dibandingkan dengan Agglomerative Ward (kes
 ```
 
 **Interpretasi.** "VIP": 111 pelanggan, recency 10 hari, frekuensi 32, belanja median 1.353 (ribu Rp); "reguler": 452 pelanggan (recency 38, frekuensi 7, belanja 502); "berisiko pergi": 337 pelanggan (recency 205, frekuensi 3, belanja 279). Tindakan yang diusulkan (program loyalitas; promo bundel; kampanye reaktivasi) adalah hipotesis yang harus diuji, misalnya dengan eksperimen A/B.
+
+**Dengan kata sederhana:** Tiap kelompok kini punya cerita: VIP baru saja beli, sering, dan besar; reguler di tengah; berisiko pergi sudah lama tidak membeli. Dari sinilah tim pemasaran menyusun tindakan berbeda untuk tiap kelompok.
 
 ### Langkah 6: menyimpan pipeline dan menempatkan pelanggan baru
 

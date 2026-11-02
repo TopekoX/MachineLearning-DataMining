@@ -1,5 +1,29 @@
 # Perbandingan Model Regresi
 
+## Gambaran singkat
+
+**Apa ini?** Membandingkan beberapa model regresi dengan data, lipatan, dan metrik yang sama.
+
+!!! tip "Analogi"
+    Seperti uji coba beberapa mobil di jalur yang sama dan kondisi yang sama sebelum memilih.
+
+**Mengapa penting?** Tidak ada model terbaik untuk semua data. Perbandingan hanya adil jika kondisi uji sama, dan pemilihan juga mempertimbangkan kestabilan serta kemudahan dijelaskan.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Sifat umum tiap model dalam satu tabel.
+2. Prosedur perbandingan yang adil.
+3. Membaca MAE, RMSE, R² bersama sebaran antar-lipatan.
+4. Memilih model.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Lipatan (*fold*) | Satu potongan data pada validasi silang |
+| Stabilitas | Skor tidak berubah-ubah antar-lipatan |
+| Interpretabilitas | Seberapa mudah model dijelaskan |
+
 ## Tujuan pembelajaran
 
 - [x] Membandingkan model regresi dengan lipatan dan metrik yang sama.

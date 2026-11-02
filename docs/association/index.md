@@ -2,6 +2,25 @@
 
 Aturan asosiasi menemukan **barang yang sering muncul bersama** dalam transaksi, misalnya barang yang sering dibeli bersamaan (*market basket analysis*). Ini adalah *unsupervised learning* berbasis pola: tidak ada target yang diprediksi.
 
+## Mulai dari sini: apa itu aturan asosiasi?
+
+**Aturan asosiasi** menemukan barang yang **sering muncul bersama**, tanpa ada label yang harus ditebak.
+
+!!! tip "Analogi"
+    Kasir minimarket melihat ribuan struk dan menyadari banyak orang yang membeli roti juga membeli mentega. Informasi itu dipakai untuk menata rak atau membuat paket hemat.
+
+**Mengapa dipelajari?** Pola belanja membantu rekomendasi produk, penataan toko, dan promosi.
+
+### Peta belajar
+
+1. **Seperti apa datanya?** → transaksi dan pengodean
+2. **Bagaimana menemukan kombinasi yang sering?** → Apriori dan FP-Growth
+3. **Bagaimana mengukur kekuatan sebuah aturan?** → *support*, *confidence*, *lift*
+4. **Bagaimana menyaring aturan yang berguna?** → ambang dan keterbatasan
+5. **Bagaimana merangkai semuanya?** → proyek minimarket
+
+Setiap pelajaran dibuka dengan **Gambaran singkat** yang menjelaskan topiknya dengan bahasa sehari-hari.
+
 ## Tujuan pembelajaran
 
 - Memahami transaksi, itemset, dan aturan asosiasi.

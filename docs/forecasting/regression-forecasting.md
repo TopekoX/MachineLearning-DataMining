@@ -1,5 +1,28 @@
 # Forecasting dengan Regresi dan Fitur Lag
 
+## Gambaran singkat
+
+**Apa ini?** Meramal dengan model regresi (Ridge, Random Forest) memakai tabel fitur lag.
+
+!!! tip "Analogi"
+    Seperti meramal harga memakai "harga sebulan lalu, tiga bulan lalu, dan setahun lalu" sebagai bahan, lalu model regresi biasa menghitung hasilnya.
+
+**Mengapa penting?** Ramalan jauh ke depan membutuhkan nilai bulan-bulan yang belum terjadi, sehingga kita memakai ramalan sendiri sebagai masukan. Cara ini punya risiko yang perlu dipahami.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Membangun model dari tabel fitur lag.
+2. Prediksi satu langkah vs rekursif multi-langkah.
+3. Mengapa model pohon perlu target selisih pada deret bertren.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Prediksi rekursif | Hasil prediksi dimasukkan lagi sebagai masukan langkah berikutnya |
+| Target selisih | Memodelkan perubahan nilai, bukan nilai itu sendiri |
+| Ekstrapolasi | Menaksir di luar rentang data latih |
+
 ## Tujuan pembelajaran
 
 - [x] Membangun model forecasting dari tabel fitur lag dengan Ridge dan Random Forest.

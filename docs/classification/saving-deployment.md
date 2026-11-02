@@ -1,5 +1,30 @@
 # Menyimpan Model, Deployment, dan Monitoring
 
+## Gambaran singkat
+
+**Apa ini?** Cara menyimpan model terlatih, memakainya pada data baru, dan memantau apakah ia masih bekerja baik setelah dipakai.
+
+!!! tip "Analogi"
+    Resep yang sudah sempurna perlu ditulis, bukan diingat. Setelah dipakai di dapur, Anda juga memeriksa apakah rasanya tetap konsisten ketika bahan berubah.
+
+**Mengapa penting?** Model yang hanya ada di notebook tidak berguna bagi pengguna. Setelah dipakai, data dunia nyata berubah sehingga kinerja bisa menurun tanpa disadari.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Menyimpan pipeline utuh dan metadatanya dengan `joblib`.
+2. Memprediksi data baru dengan format kolom yang benar.
+3. Opsi deployment dan risiko keamanan berkas model.
+4. Memantau pergeseran data (*data drift*).
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Pipeline | Rangkaian praproses dan model sebagai satu kesatuan |
+| `joblib` | Pustaka penyimpan objek Python ke berkas |
+| *Data drift* | Pola data baru berbeda dari data latih |
+| Deployment | Menyediakan model agar bisa dipakai |
+
 ## Tujuan pembelajaran
 
 - [x] Menyimpan dan memuat `Pipeline` utuh dengan `joblib`, beserta metadata.

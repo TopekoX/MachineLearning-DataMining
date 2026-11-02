@@ -1,5 +1,29 @@
 # Logistic Regression
 
+## Gambaran singkat
+
+**Apa ini?** Model yang menghitung skor dari fitur, lalu mengubahnya menjadi probabilitas (0 sampai 1) bahwa data termasuk kelas tertentu.
+
+!!! tip "Analogi"
+    Dokter menjumlahkan poin risiko: umur, tekanan darah, kebiasaan merokok. Makin tinggi total poin, makin besar kemungkinan sakit, lalu poin diubah menjadi persentase. Itulah logistic regression; meski bernama "regresi", ia dipakai untuk klasifikasi.
+
+**Mengapa penting?** Model ini cepat, stabil, memberi probabilitas, dan bobotnya bisa dibaca. Ia sering menjadi model pertama yang dicoba.
+
+**Yang akan dipelajari, berurutan:**
+
+1. Dari skor linear menjadi probabilitas (fungsi sigmoid).
+2. Regularisasi dan parameter `C` agar model tidak terlalu rumit.
+3. Melatih, memprediksi, dan membaca koefisien dengan hati-hati.
+
+**Istilah awal:**
+
+| Istilah | Arti sederhana |
+|---|---|
+| Sigmoid | Fungsi yang mengubah skor apa pun menjadi angka 0 sampai 1 |
+| Koefisien / bobot | Seberapa besar tiap fitur memengaruhi skor |
+| Regularisasi | Penalti agar model tidak terlalu rumit |
+| `C` | Pengatur regularisasi; kecil = lebih kuat |
+
 ## Tujuan pembelajaran
 
 - [x] Menjelaskan bagaimana Logistic Regression mengubah skor linear menjadi probabilitas.
